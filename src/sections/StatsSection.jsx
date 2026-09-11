@@ -44,7 +44,7 @@ const statsData = [
 
 export default function StatsSection() {
   return (
-    <section className="stats-band" id="numbers">
+    <section className="stats-band section-theme-dark" id="numbers">
       <div className="container">
         <StaggerContainer staggerDelay={0.1} className="stats-grid-editorial">
           {statsData.map((stat, idx) => (

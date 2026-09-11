@@ -17,7 +17,7 @@ const processSteps = [
 
 export default function ProcessSection() {
   return (
-    <section className="section process-section" id="process">
+    <section className="section process-section section-theme-dark" id="process">
       <div className="container">
         <SectionHeading
           eyebrow="THE HIGHERIT WAY"

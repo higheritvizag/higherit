@@ -3,6 +3,7 @@
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import './globals.css';
 
 :root {
   /* Brand Colors */
@@ -41,7 +42,7 @@
   --font-code: 'JetBrains Mono', monospace;
 
   /* Spacing Rhythm - Generous 2026 Editorial Whitespace */
-  --section-padding-y: 140px;
+  --section-padding-y: 90px;
   --section-padding-x: 5%;
   --container-max-width: 1360px;
   --border-radius-sm: 8px;
@@ -211,9 +212,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 .navbar.scrolled {
   padding: 14px 0;
-  background: rgba(2, 5, 14, 0.85);
+  background: var(--nav-bg);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: var(--shadow-card);
 }
 
 .nav-container {
@@ -230,49 +232,30 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .brand-logo img {
   height: 36px;
   width: auto;
+  filter: var(--logo-filter);
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 10px 28px;
+  gap: 28px;
+  background: var(--nav-menu-bg);
+  padding: 8px 24px;
   border-radius: var(--border-radius-pill);
-  border: 1px solid var(--border-dark);
+  border: 1px solid var(--border-color);
   backdrop-filter: blur(12px);
 }
 
 .nav-link {
   font-family: var(--font-heading);
-  font-weight: 500;
-  font-size: 0.95rem;
-  color: var(--text-dark-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--nav-text-muted);
   transition: color var(--transition-fast);
 }
 
 .nav-link:hover, .nav-link.active {
-  color: var(--text-dark-primary);
-}
-
-.btn-nav-talk {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-heading);
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 10px 22px;
-  background: var(--brand-orange);
-  color: #FFFFFF;
-  border-radius: var(--border-radius-pill);
-  box-shadow: 0 4px 16px var(--brand-orange-glow);
-  transition: all var(--transition-smooth);
-}
-
-.btn-nav-talk:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px var(--brand-orange-glow);
+  color: var(--nav-text);
 }
 
 /* Mobile Nav Toggle */
@@ -287,7 +270,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: block;
   width: 24px;
   height: 2px;
-  background-color: var(--text-dark-primary);
+  background-color: var(--nav-text);
   transition: all var(--transition-fast);
 }
 
@@ -297,13 +280,14 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   top: 70px;
   left: 0;
   right: 0;
-  background: rgba(2, 5, 14, 0.95);
+  background: var(--nav-bg);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-color);
   padding: 24px var(--section-padding-x);
   flex-direction: column;
   gap: 16px;
   z-index: 999;
+  box-shadow: var(--shadow-card);
 }
 
 .mobile-menu.open {
@@ -314,7 +298,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-family: var(--font-heading);
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--text-dark-primary);
+  color: var(--nav-text);
   padding: 8px 0;
 }
 
@@ -664,8 +648,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   width: 130px;
   height: 130px;
   border-radius: var(--border-radius-lg);
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-dark);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -673,8 +657,9 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 8px;
   text-align: center;
   padding: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow-card);
   transition: all var(--transition-smooth);
+  color: var(--text-primary);
 }
 
 .ecosystem-node:hover {
@@ -692,34 +677,36 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 700;
+  color: var(--text-primary);
 }
 
 /* Capability Blocks (Editorial Layouts) */
 .capabilities-vertical-stack {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 36px;
 }
 
 .cap-editorial-card {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-dark);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-xl);
-  padding: 48px;
+  padding: 40px;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-card);
   transition: all var(--transition-smooth);
 }
 
 .cap-editorial-card:hover {
-  border-color: var(--border-dark-hover);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  border-color: var(--border-color-hover);
+  box-shadow: var(--shadow-card);
 }
 
 .cap-editorial-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 48px;
   align-items: center;
 }
 
@@ -730,7 +717,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 @media (max-width: 1024px) {
   .cap-editorial-grid, .cap-editorial-grid.reverse-grid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 32px;
   }
 }
 
@@ -740,7 +727,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 700;
   color: var(--brand-orange);
   letter-spacing: 0.1em;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .cap-editorial-title {
@@ -748,22 +735,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 800;
   line-height: 1.15;
-  margin-bottom: 16px;
-  color: #FFFFFF;
+  margin-bottom: 14px;
+  color: var(--text-primary);
 }
 
 .cap-editorial-desc {
-  color: var(--text-dark-secondary);
+  color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.7;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
 }
 
 .cap-tags-flex {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .cap-tag-pill {
@@ -771,17 +758,17 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 600;
   padding: 6px 16px;
   border-radius: var(--border-radius-pill);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-dark);
-  color: var(--text-dark-secondary);
+  background: var(--bg-surface-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
 }
 
 /* Capability Interactive Widgets */
 .cap-widget-container {
-  background: rgba(2, 5, 14, 0.6);
-  border: 1px solid var(--border-dark);
+  background: var(--bg-surface-secondary);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
-  padding: 32px;
+  padding: 28px;
   position: relative;
 }
 
@@ -1217,8 +1204,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
 /* Editorial Case Studies */
 .case-editorial-hero {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-dark);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-xl);
   padding: 48px;
   display: grid;
@@ -1288,7 +1275,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-family: var(--font-heading);
   font-size: clamp(2rem, 3.5vw, 2.8rem);
   font-weight: 900;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 24px;
   line-height: 1.1;
 }
@@ -1350,8 +1337,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .case-editorial-card {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-dark);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-xl);
   overflow: hidden;
   transition: all var(--transition-smooth);
@@ -1404,7 +1391,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 18px;
 }
 
@@ -1727,8 +1714,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .ind-content-box {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-dark);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-xl);
   padding: 48px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
@@ -1738,7 +1725,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-family: var(--font-heading);
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
   margin-bottom: 32px;
 }
 
@@ -1803,8 +1790,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .product-tab-card {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-dark);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
   padding: 20px 24px;
   text-align: left;
@@ -1817,7 +1804,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .product-tab-card.active {
-  background: var(--bg-dark-card-hover);
+  background: var(--bg-card-hover);
   border-color: var(--brand-orange);
   box-shadow: 0 8px 24px rgba(255, 122, 0, 0.2);
 }
@@ -1835,12 +1822,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 800;
-  color: #FFFFFF;
+  color: var(--text-primary);
 }
 
 .product-showcase-container {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-dark);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-xl);
   padding: 48px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
@@ -1865,7 +1852,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 800;
   margin-top: 12px;
   margin-bottom: 10px;
-  color: #FFFFFF;
+  color: var(--text-primary);
   line-height: 1.15;
 }
 
@@ -1878,7 +1865,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .product-showcase-desc {
-  color: var(--text-dark-secondary);
+  color: var(--text-secondary);
   font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: 28px;
@@ -1902,7 +1889,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   align-items: center;
   gap: 10px;
   font-size: 0.9rem;
-  color: var(--text-dark-primary);
+  color: var(--text-primary);
   font-weight: 500;
 }
 
@@ -2100,8 +2087,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .test-card {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-dark);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
   padding: 36px;
 }
@@ -2109,7 +2096,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .test-text {
   font-size: 1.1rem;
   font-style: italic;
-  color: var(--text-dark-primary);
+  color: var(--text-primary);
   margin-bottom: 24px;
 }
 
@@ -2132,8 +2119,8 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .blog-card {
-  background: var(--bg-dark-card);
-  border: 1px solid var(--border-dark);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
   padding: 32px;
 }
@@ -2150,6 +2137,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 12px;
+  color: var(--text-primary);
 }
 
 /* Final CTA Section */

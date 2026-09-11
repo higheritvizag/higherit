@@ -47,7 +47,7 @@ export default function IndustryExplorerSection({ onOpenTalk }) {
   const current = industryData[activeTab] || industryData.healthcare
 
   return (
-    <section className="section industries-section" id="industries">
+    <section className="section industries-section section-theme-light" id="industries">
       <div className="container">
         <SectionHeading
           eyebrow="INDUSTRIES WE SERVE"

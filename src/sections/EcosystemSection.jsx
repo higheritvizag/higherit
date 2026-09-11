@@ -3,7 +3,7 @@ import { Palette, Globe, TrendingUp, Users, Code2, Cpu, Bot } from 'lucide-react
 
 export default function EcosystemSection() {
   return (
-    <section className="section ecosystem-section">
+    <section className="section ecosystem-section section-theme-light">
       <div className="container">
         <div className="ecosystem-container">
           <div>

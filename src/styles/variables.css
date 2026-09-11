@@ -1,5 +1,6 @@
+/* HIGHERIT DUAL THEME ENGINE (LIGHT + DARK) */
 :root {
-  /* Brand Palette */
+  /* Brand Palette (Shared across both themes) */
   --brand-blue: #0B63F6;
   --brand-blue-glow: rgba(11, 99, 246, 0.35);
   --brand-blue-light: #3D85FF;
@@ -7,44 +8,64 @@
   --brand-orange-glow: rgba(255, 122, 0, 0.45);
   --brand-orange-light: #FF9433;
   --brand-orange-dark: #D65F00;
-  
-  /* Dark Mode Surfaces */
-  --bg-dark: #02050E;
-  --bg-dark-card: #080D1A;
-  --bg-dark-card-hover: #0E1527;
-  --bg-dark-surface: #0B1120;
-  --border-dark: rgba(255, 255, 255, 0.08);
-  --border-dark-hover: rgba(255, 122, 0, 0.35);
-  --text-dark-primary: #FFFFFF;
-  --text-dark-secondary: #94A3B8;
-  --text-dark-muted: #64748B;
-
-  /* Light Mode Surfaces */
-  --bg-light: #F8FAFC;
-  --bg-light-surface: #FFFFFF;
-  --bg-light-card: #FFFFFF;
-  --border-light: rgba(15, 23, 42, 0.08);
-  --border-light-hover: rgba(11, 99, 246, 0.25);
-  --text-light-primary: #0F172A;
-  --text-light-secondary: #475569;
-  --text-light-muted: #94A3B8;
 
   /* Typography Fonts */
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-code: 'JetBrains Mono', monospace;
 
-  /* Spacing Rhythm - Generous 2026 Whitespace */
-  --section-padding-y: 140px;
+  /* Tightened Spacing Rhythm */
+  --section-padding-y: 90px;
+  --section-padding-y-mobile: 56px;
   --section-padding-x: 5%;
   --container-max-width: 1360px;
   --border-radius-sm: 8px;
   --border-radius-md: 16px;
   --border-radius-lg: 24px;
-  --border-radius-xl: 36px;
+  --border-radius-xl: 32px;
   --border-radius-pill: 9999px;
 
   /* Transitions */
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Default Theme Tokens (fallback: Dark) */
+:root, [data-theme="dark"] {
+  --bg-primary: #02050E;
+  --bg-surface: #080D1A;
+  --bg-surface-secondary: #0C1424;
+  --bg-card: #080D1A;
+  --bg-card-hover: #0E1527;
+  --text-primary: #F7F9FC;
+  --text-secondary: #98A4B7;
+  --text-muted: #64748B;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-hover: rgba(255, 122, 0, 0.35);
+  --shadow-card: 0 15px 40px rgba(0, 0, 0, 0.5);
+  --nav-bg: rgba(2, 5, 14, 0.85);
+  --nav-menu-bg: rgba(8, 13, 26, 0.6);
+  --nav-text: #F7F9FC;
+  --nav-text-muted: #98A4B7;
+  --logo-filter: none;
+}
+
+/* Light Theme Tokens */
+[data-theme="light"] {
+  --bg-primary: #F7F8FA;
+  --bg-surface: #FFFFFF;
+  --bg-surface-secondary: #F0F3F7;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
+  --text-primary: #07111F;
+  --text-secondary: #526070;
+  --text-muted: #8896A6;
+  --border-color: rgba(7, 17, 31, 0.10);
+  --border-color-hover: rgba(255, 122, 0, 0.4);
+  --shadow-card: 0 10px 30px rgba(7, 17, 31, 0.06);
+  --nav-bg: rgba(247, 248, 250, 0.85);
+  --nav-menu-bg: rgba(255, 255, 255, 0.7);
+  --nav-text: #07111F;
+  --nav-text-muted: #526070;
+  --logo-filter: none;
 }

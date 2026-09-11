@@ -56,7 +56,7 @@ export default function SelectedWorkSection({ onOpenTalk }) {
   const listProjects = projectsData.slice(1)
 
   return (
-    <section className="section work-section" id="work">
+    <section className="section work-section section-theme-light" id="work">
       <div className="container">
         <SectionHeading
           eyebrow="SELECTED WORK"

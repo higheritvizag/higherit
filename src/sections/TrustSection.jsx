@@ -17,7 +17,7 @@ export default function TrustSection() {
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <section className="trust-section">
+    <section className="trust-section section-theme-light">
       <div className="container">
         <div className="trust-headline">
           <ShieldCheck style={{ width: 16, height: 16, color: 'var(--brand-orange)', display: 'inline', marginRight: 8 }} />

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer section-theme-dark">
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">

@@ -39,7 +39,7 @@ export default function HeroSection({ onOpenTalk }) {
   ]
 
   return (
-    <section className="hero" id="home">
+    <section className="hero section-theme-dark" id="home">
       {/* Background Grid & Glow Overlay */}
       <div className="hero-bg-grid" />
 

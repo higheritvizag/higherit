@@ -79,7 +79,7 @@ export default function ProductsSection() {
   const current = productSuite[selectedProduct]
 
   return (
-    <section className="section products-section" id="products">
+    <section className="section products-section section-theme-light" id="products">
       <div className="container">
         <SectionHeading
           eyebrow="HIGHERIT PRODUCT SUITE"

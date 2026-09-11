@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function InsightsSection() {
   return (
-    <section className="section blog-section" id="blog">
+    <section className="section blog-section section-theme-light" id="blog">
       <div className="container">
         <div className="section-header" style={{ textAlign: 'center', marginBottom: 60 }}>
           <div className="eyebrow" style={{ margin: '0 auto 24px' }}>HIGHERIT INSIGHTS</div>

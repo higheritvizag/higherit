@@ -42,7 +42,7 @@ export default function AISection() {
   const currentScenario = aiScenarios[activeScenario]
 
   return (
-    <section className="section ai-section" id="ai">
+    <section className="section ai-section section-theme-dark" id="ai">
       <div className="container">
         <SectionHeading
           eyebrow="THE FUTURE IS INTELLIGENT"

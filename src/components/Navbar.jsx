@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import ThemeToggle from './ThemeToggle'
 
 export default function Navbar({ onOpenTalk }) {
   const [scrolled, setScrolled] = useState(false)
@@ -34,11 +35,15 @@ export default function Navbar({ onOpenTalk }) {
             <a href="#blog" className="nav-link">Blog</a>
           </nav>
 
-          <div className="nav-cta">
-            <button type="button" onClick={onOpenTalk} className="btn-nav-talk" id="header-cta-talk">
-              Let's Talk
-              <span className="btn-arrow">→</span>
-            </button>
+          <div className="nav-right-actions">
+            <ThemeToggle compact={true} />
+
+            <div className="nav-cta">
+              <button type="button" onClick={onOpenTalk} className="btn-nav-talk" id="header-cta-talk">
+                Let's Talk
+                <span className="btn-arrow">→</span>
+              </button>
+            </div>
           </div>
 
           <button 
@@ -62,6 +67,12 @@ export default function Navbar({ onOpenTalk }) {
           <a href="#products" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Products</a>
           <a href="#work" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Projects</a>
           <a href="#blog" className="mobile-nav-link" onClick={() => setMobileOpen(false)}>Blog</a>
+          
+          <div className="mobile-theme-row">
+            <span style={{ fontSize: '0.85rem', color: 'var(--nav-text-muted)' }}>Theme:</span>
+            <ThemeToggle compact={false} />
+          </div>
+
           <button 
             type="button" 
             className="btn-nav-talk" 

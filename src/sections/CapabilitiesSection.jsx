@@ -8,7 +8,7 @@ export default function CapabilitiesSection({ onOpenTalk }) {
   const [activeBrandTab, setActiveBrandTab] = useState('palette')
 
   return (
-    <section className="section services-section" id="services">
+    <section className="section services-section section-theme-light" id="services">
       <div className="container">
         <SectionHeading
           eyebrow="WHAT WE DO"

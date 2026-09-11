@@ -6,6 +6,18 @@
   <title>HigherIT — Digital Growth • Technology • AI</title>
   <meta name="description" content="HigherIT is a digital growth and technology company helping businesses build powerful brands, attract more customers, build websites, applications and automate with AI.">
   <link rel="icon" type="image/png" href="/assets/images/logo.png">
+  <script>
+    (function() {
+      try {
+        var saved = localStorage.getItem('higherit-theme');
+        var theme = saved;
+        if (!theme || theme === 'system') {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {}
+    })();
+  </script>
 </head>
 <body>
   <div id="root"></div>
