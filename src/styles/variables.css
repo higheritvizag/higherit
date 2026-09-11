@@ -1,0 +1,50 @@
+:root {
+  /* Brand Palette */
+  --brand-blue: #0B63F6;
+  --brand-blue-glow: rgba(11, 99, 246, 0.35);
+  --brand-blue-light: #3D85FF;
+  --brand-orange: #FF7A00;
+  --brand-orange-glow: rgba(255, 122, 0, 0.45);
+  --brand-orange-light: #FF9433;
+  --brand-orange-dark: #D65F00;
+  
+  /* Dark Mode Surfaces */
+  --bg-dark: #02050E;
+  --bg-dark-card: #080D1A;
+  --bg-dark-card-hover: #0E1527;
+  --bg-dark-surface: #0B1120;
+  --border-dark: rgba(255, 255, 255, 0.08);
+  --border-dark-hover: rgba(255, 122, 0, 0.35);
+  --text-dark-primary: #FFFFFF;
+  --text-dark-secondary: #94A3B8;
+  --text-dark-muted: #64748B;
+
+  /* Light Mode Surfaces */
+  --bg-light: #F8FAFC;
+  --bg-light-surface: #FFFFFF;
+  --bg-light-card: #FFFFFF;
+  --border-light: rgba(15, 23, 42, 0.08);
+  --border-light-hover: rgba(11, 99, 246, 0.25);
+  --text-light-primary: #0F172A;
+  --text-light-secondary: #475569;
+  --text-light-muted: #94A3B8;
+
+  /* Typography Fonts */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-code: 'JetBrains Mono', monospace;
+
+  /* Spacing Rhythm - Generous 2026 Whitespace */
+  --section-padding-y: 140px;
+  --section-padding-x: 5%;
+  --container-max-width: 1360px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 16px;
+  --border-radius-lg: 24px;
+  --border-radius-xl: 36px;
+  --border-radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
