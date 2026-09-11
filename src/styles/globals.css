@@ -112,7 +112,7 @@ button {
 .highlight-blue { color: var(--brand-blue); }
 .highlight-orange { color: var(--brand-orange); }
 
-/* Buttons */
+/* Buttons & Micro-Interactions */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -123,42 +123,51 @@ button {
   font-size: 1rem;
   font-weight: 700;
   border-radius: var(--border-radius-pill);
-  transition: all var(--transition-smooth);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.98);
 }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-orange-dark) 100%);
   color: #FFFFFF;
-  box-shadow: 0 10px 30px var(--brand-orange-glow);
+  box-shadow: 0 8px 24px var(--brand-orange-glow);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(255, 122, 0, 0.6);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 36px rgba(255, 122, 0, 0.55);
 }
 
 .btn-secondary {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.05);
   color: #FFFFFF;
   border: 1px solid var(--border-dark);
   backdrop-filter: blur(16px);
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px) scale(1.01);
 }
 
 .btn-blue {
   background: linear-gradient(135deg, var(--brand-blue) 0%, #0047B8 100%);
   color: #FFFFFF;
-  box-shadow: 0 10px 30px var(--brand-blue-glow);
+  box-shadow: 0 8px 24px var(--brand-blue-glow);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-blue:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 16px 40px rgba(11, 99, 246, 0.6);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 14px 36px rgba(11, 99, 246, 0.55);
 }
 
 .btn-arrow {
@@ -169,7 +178,7 @@ button {
   height: 28px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
-  transition: transform var(--transition-fast);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn:hover .btn-arrow {
@@ -192,12 +201,17 @@ button {
   background: linear-gradient(135deg, var(--brand-orange) 0%, var(--brand-orange-dark) 100%);
   border-radius: var(--border-radius-pill);
   box-shadow: 0 4px 16px var(--brand-orange-glow);
-  transition: all var(--transition-smooth);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .btn-nav-talk:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 122, 0, 0.5);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(255, 122, 0, 0.5);
+}
+
+.btn-nav-talk:active {
+  transform: scale(0.97);
 }
 
 .btn-nav-talk .btn-arrow {
@@ -209,9 +223,9 @@ button {
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
-  transition: transform var(--transition-fast);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-nav-talk:hover .btn-arrow {
-  transform: translateX(3px);
+  transform: translateX(4px);
 }
