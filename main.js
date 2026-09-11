@@ -1,45 +1,24 @@
 /* ==========================================================================
-   HIGHERIT INTERACTION CONTROLLER (MAIN.JS)
+   HIGHERIT INTERACTION CONTROLLER (MAIN.JS - SECOND PASS)
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMobileMenu();
-  initEcosystem();
   initCounterObserver();
-  initIndustrySelector();
+  initIndustryExplorer();
   initSmoothScroll();
 });
 
-/* --- 1. Sticky Navbar & Active Section Tracking --- */
+/* --- 1. Sticky Navbar --- */
 function initNavbar() {
   const navbar = document.getElementById('navbar');
-  const navLinks = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('section[id]');
-
   window.addEventListener('scroll', () => {
     if (window.scrollY > 40) {
       navbar.classList.add('scrolled');
     } else {
       navbar.classList.remove('scrolled');
     }
-
-    // ScrollSpy active link update
-    let currentSection = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop - 120;
-      const sectionHeight = section.offsetHeight;
-      if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-        currentSection = section.getAttribute('id');
-      }
-    });
-
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentSection}`) {
-        link.classList.add('active');
-      }
-    });
   });
 }
 
@@ -53,41 +32,16 @@ function initMobileMenu() {
 
   toggleBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('open');
-    toggleBtn.classList.toggle('active');
   });
 
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
-      toggleBtn.classList.remove('active');
     });
   });
 }
 
-/* --- 3. Interactive Ecosystem Diagram --- */
-function initEcosystem() {
-  const nodes = document.querySelectorAll('.orbit-node');
-  const core = document.querySelector('.ecosystem-core');
-
-  nodes.forEach(node => {
-    node.addEventListener('mouseenter', () => {
-      const nodeName = node.dataset.node || 'Feature';
-      if (core) {
-        core.style.transform = 'scale(1.08)';
-        core.style.boxShadow = '0 0 50px rgba(255, 122, 0, 0.6)';
-      }
-    });
-
-    node.addEventListener('mouseleave', () => {
-      if (core) {
-        core.style.transform = 'scale(1)';
-        core.style.boxShadow = '0 0 40px rgba(11, 99, 246, 0.4)';
-      }
-    });
-  });
-}
-
-/* --- 4. Animated Numerical Counter --- */
+/* --- 3. Animated Numerical Counter --- */
 function initCounterObserver() {
   const counterElements = document.querySelectorAll('.counter-value');
   if (!counterElements.length) return;
@@ -109,10 +63,10 @@ function initCounterObserver() {
           const timer = setInterval(() => {
             current += increment;
             if (current >= target) {
-              counter.textContent = target + '+';
+              counter.innerHTML = target + '<span>+</span>';
               clearInterval(timer);
             } else {
-              counter.textContent = Math.floor(current) + '+';
+              counter.innerHTML = Math.floor(current) + '<span>+</span>';
             }
           }, stepTime);
         });
@@ -126,18 +80,71 @@ function initCounterObserver() {
   }
 }
 
-/* --- 5. Interactive Industry Selector --- */
-function initIndustrySelector() {
-  const industryCards = document.querySelectorAll('.industry-card');
-  industryCards.forEach(card => {
-    card.addEventListener('click', () => {
-      industryCards.forEach(c => c.style.borderColor = 'var(--border-light)');
-      card.style.borderColor = 'var(--brand-orange)';
+/* --- 4. Interactive Industry Explorer --- */
+const industryData = {
+  healthcare: {
+    title: 'Healthcare Digital Solutions',
+    challenge: 'Challenge: Patient trust, fragmented appointment booking systems, and low online visibility for specialized medical treatments.',
+    solution: 'HigherIT Solution: High-trust hospital portals, online appointment scheduling, SEO for medical treatments, and AI receptionist automation.'
+  },
+  realestate: {
+    title: 'Real Estate Growth Infrastructure',
+    challenge: 'Challenge: Managing plot inventories across channels, high lead acquisition costs, and delayed buyer follow-ups.',
+    solution: 'HigherIT Solution: Interactive land plot CRM software, Meta & Google lead generation campaigns, and instant WhatsApp lead assignment.'
+  },
+  education: {
+    title: 'Educational Institution Platforms',
+    challenge: 'Challenge: Converting website visitors into student enrolments and streamlining fee/application processes.',
+    solution: 'HigherIT Solution: Custom student portal applications, admission funnel ads, brand identity, and automated enquiry routing.'
+  },
+  retail: {
+    title: 'Retail & E-commerce Scaling',
+    challenge: 'Challenge: High cart abandonment, complex inventory sync across stores, and rising customer acquisition costs.',
+    solution: 'HigherIT Solution: Omnichannel e-commerce web apps, custom POS billing integrations, performance marketing, and automated retargeting.'
+  },
+  hospitality: {
+    title: 'Hospitality & Luxury Experiences',
+    challenge: 'Challenge: Standing out in competitive markets and securing direct bookings without heavy third-party commissions.',
+    solution: 'HigherIT Solution: High-conversion direct booking websites, CGI venue videos, social media brand identity, and Google Ads.'
+  },
+  services: {
+    title: 'Professional Services Authority',
+    challenge: 'Challenge: Differentiating firm expertise and generating high-retainer client opportunities consistently.',
+    solution: 'HigherIT Solution: Thought-leadership web design, LinkedIn authority campaigns, CRM workflow setup, and SEO optimization.'
+  },
+  startups: {
+    title: 'Startups & Technology Product Launch',
+    challenge: 'Challenge: Taking an initial concept from MVP to market launch with fast validation and scalable tech.',
+    solution: 'HigherIT Solution: Full-stack SaaS application development, product design systems, landing page engineering, and launch marketing.'
+  }
+};
+
+function initIndustryExplorer() {
+  const buttons = document.querySelectorAll('.ind-tab-btn');
+  const titleEl = document.getElementById('indTitle');
+  const challengeEl = document.getElementById('indChallenge');
+  const solutionEl = document.getElementById('indSolution');
+
+  if (!buttons.length || !titleEl) return;
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const indKey = btn.dataset.ind;
+      const data = industryData[indKey];
+
+      if (data) {
+        titleEl.textContent = data.title;
+        challengeEl.textContent = data.challenge;
+        solutionEl.textContent = data.solution;
+      }
     });
   });
 }
 
-/* --- 6. Smooth Scrolling for Nav Links --- */
+/* --- 5. Smooth Scroll --- */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {

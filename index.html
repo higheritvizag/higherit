@@ -21,17 +21,13 @@
       </a>
       
       <nav class="nav-menu" id="desktopNav">
-        <a href="#home" class="nav-link active" id="nav-home">Home</a>
-        <a href="#about" class="nav-link" id="nav-about">About Us</a>
-        <a href="#services" class="nav-link nav-dropdown" id="nav-services">
-          Services
-          <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i>
-        </a>
-        <a href="#industries" class="nav-link" id="nav-industries">Industries</a>
-        <a href="#products" class="nav-link" id="nav-products">Products</a>
-        <a href="#work" class="nav-link" id="nav-projects">Projects</a>
-        <a href="#blog" class="nav-link" id="nav-blog">Blog</a>
-        <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About Us</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#industries" class="nav-link">Industries</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#work" class="nav-link">Projects</a>
+        <a href="#blog" class="nav-link">Blog</a>
       </nav>
 
       <div class="nav-cta">
@@ -58,14 +54,29 @@
     <a href="#products" class="mobile-nav-link">Products</a>
     <a href="#work" class="mobile-nav-link">Projects</a>
     <a href="#blog" class="mobile-nav-link">Blog</a>
-    <a href="#contact" class="mobile-nav-link">Contact</a>
     <a href="#contact" class="btn btn-primary" style="margin-top: 20px;">Let's Talk →</a>
   </div>
 
   <!-- ==========================================================================
-     2. HERO SECTION
+     2. HERO SECTION — CONTINUOUS ORANGE GROWTH TRAJECTORY & 2026 EDITORIAL
      ========================================================================== -->
   <section class="hero" id="home">
+    <!-- Continuous Upward Orange Vector Trajectory SVG Backdrop -->
+    <svg class="hero-trajectory-svg" viewBox="0 0 800 600" fill="none">
+      <path d="M-100 550 C200 450, 350 250, 750 50" stroke="url(#heroOrangeGradient)" stroke-width="6" stroke-linecap="round" />
+      <path d="M-100 550 C200 450, 350 250, 750 50" stroke="url(#heroOrangeGlow)" stroke-width="20" stroke-opacity="0.3" stroke-linecap="round" />
+      <defs>
+        <linearGradient id="heroOrangeGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#FF7A00" />
+          <stop offset="100%" stop-color="#FF9433" />
+        </linearGradient>
+        <linearGradient id="heroOrangeGlow" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#FF7A00" />
+          <stop offset="100%" stop-color="#0B63F6" />
+        </linearGradient>
+      </defs>
+    </svg>
+
     <div class="container">
       <div class="hero-grid">
         <div class="hero-content">
@@ -81,31 +92,31 @@
             HigherIT is a digital growth and technology company helping businesses build powerful brands, attract more customers and use technology to work smarter. From branding and digital marketing to websites, applications, AI and automation, we bring strategy, creativity and technology together under one roof.
           </p>
           <div class="hero-buttons">
-            <a href="#contact" class="btn btn-primary" id="hero-cta-start">
+            <a href="#contact" class="btn btn-primary">
               Start Your Project
               <span class="btn-arrow">→</span>
             </a>
-            <a href="#work" class="btn btn-secondary" id="hero-cta-explore">
+            <a href="#work" class="btn btn-secondary">
               <i data-lucide="play-circle" style="width: 18px; height: 18px;"></i>
               Explore Our Work
             </a>
           </div>
         </div>
 
-        <div class="hero-visual-wrapper">
-          <div class="hero-visual-card">
-            <img src="assets/images/hero_rocket.png" alt="HigherIT Digital Growth Rocket Visual" width="580" height="420" loading="eager">
+        <div class="hero-visual-container">
+          <div class="hero-main-card">
+            <img src="assets/images/hero_rocket.png" alt="HigherIT Digital Growth Rocket Visual" width="580" height="420">
             
             <!-- Floating Nodes -->
-            <div class="hero-node hero-node-1">
+            <div class="hero-floating-node node-pos-1">
               <div class="hero-node-dot"></div>
               <div class="hero-node-text">STRATEGY <span>• You Dream</span></div>
             </div>
-            <div class="hero-node hero-node-2">
+            <div class="hero-floating-node node-pos-2">
               <div class="hero-node-dot"></div>
               <div class="hero-node-text">DIGITAL <span>• We Build</span></div>
             </div>
-            <div class="hero-node hero-node-3">
+            <div class="hero-floating-node node-pos-3">
               <div class="hero-node-dot"></div>
               <div class="hero-node-text">GROWTH <span>• We Scale</span></div>
             </div>
@@ -113,107 +124,65 @@
         </div>
       </div>
 
-      <!-- Trust Metrics Bar -->
-      <div class="hero-metrics-bar">
-        <div class="metric-item">
-          <div class="metric-number"><span class="highlight">150+</span></div>
-          <div class="metric-label">Projects Delivered</div>
+      <!-- Hero Metrics Strip -->
+      <div class="hero-metrics-strip">
+        <div>
+          <div class="hero-metric-val"><span class="highlight-orange">150+</span></div>
+          <div class="hero-metric-lbl">Projects Delivered</div>
         </div>
-        <div class="metric-item">
-          <div class="metric-number"><span class="highlight">300+</span></div>
-          <div class="metric-label">Businesses Served</div>
+        <div>
+          <div class="hero-metric-val"><span class="highlight-blue">300+</span></div>
+          <div class="hero-metric-lbl">Businesses Served</div>
         </div>
-        <div class="metric-item">
-          <div class="metric-number"><span class="highlight">50+</span></div>
-          <div class="metric-label">Active Clients</div>
+        <div>
+          <div class="hero-metric-val"><span class="highlight-orange">50+</span></div>
+          <div class="hero-metric-lbl">Active Clients</div>
         </div>
-        <div class="metric-item">
-          <div class="metric-number"><span class="highlight">4+</span></div>
-          <div class="metric-label">Years of Experience</div>
+        <div>
+          <div class="hero-metric-val"><span class="highlight-blue">4+</span></div>
+          <div class="hero-metric-lbl">Years of Experience</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     3. TRUST / CLIENT LOGO STRIP
+     3. TRUST SECTION — EDITORIAL SYSTEM
      ========================================================================== -->
-  <section class="client-strip-section">
-    <div class="container client-strip-container">
-      <div class="client-strip-title">Trusted by businesses that believe in going higher</div>
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-headline">Trusted by businesses building what comes next</div>
       
-      <div class="logo-ticker">
-        <div class="logo-track">
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="building-2"></i></div> Akshaya Hospital
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon" style="color: var(--brand-orange);"><i data-lucide="flame"></i></div> FlameX
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="calendar"></i></div> Somarka Events
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="cross"></i></div> 4D Derma Den
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="heart-pulse"></i></div> Amma Hospital
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="layers"></i></div> Vesuvian
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="graduation-cap"></i></div> Vriha School
-          </div>
-          <!-- Duplicated for infinite smooth scroll ticker -->
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="building-2"></i></div> Akshaya Hospital
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon" style="color: var(--brand-orange);"><i data-lucide="flame"></i></div> FlameX
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="calendar"></i></div> Somarka Events
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="cross"></i></div> 4D Derma Den
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="heart-pulse"></i></div> Amma Hospital
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="layers"></i></div> Vesuvian
-          </div>
-          <div class="client-logo-item">
-            <div class="client-icon"><i data-lucide="graduation-cap"></i></div> Vriha School
-          </div>
+      <div class="ticker-wrapper">
+        <div class="ticker-track">
+          <div class="ticker-item"><i data-lucide="building-2" style="color: var(--brand-blue);"></i> Akshaya Hospital</div>
+          <div class="ticker-item"><i data-lucide="flame" style="color: var(--brand-orange);"></i> FlameX</div>
+          <div class="ticker-item"><i data-lucide="calendar" style="color: var(--brand-blue);"></i> Somarka Events</div>
+          <div class="ticker-item"><i data-lucide="cross" style="color: var(--brand-orange);"></i> 4D Derma Den</div>
+          <div class="ticker-item"><i data-lucide="heart-pulse" style="color: var(--brand-blue);"></i> Amma Hospital</div>
+          <div class="ticker-item"><i data-lucide="layers" style="color: var(--brand-orange);"></i> Vesuvian</div>
+          <div class="ticker-item"><i data-lucide="graduation-cap" style="color: var(--brand-blue);"></i> Vriha School</div>
+          <!-- Duplicated for infinite scroll -->
+          <div class="ticker-item"><i data-lucide="building-2" style="color: var(--brand-blue);"></i> Akshaya Hospital</div>
+          <div class="ticker-item"><i data-lucide="flame" style="color: var(--brand-orange);"></i> FlameX</div>
+          <div class="ticker-item"><i data-lucide="calendar" style="color: var(--brand-blue);"></i> Somarka Events</div>
+          <div class="ticker-item"><i data-lucide="cross" style="color: var(--brand-orange);"></i> 4D Derma Den</div>
         </div>
-      </div>
-
-      <div class="industry-pills-row">
-        <span class="industry-pill">Healthcare</span>
-        <span class="industry-pill">Real Estate</span>
-        <span class="industry-pill">Education</span>
-        <span class="industry-pill">Hospitality</span>
-        <span class="industry-pill">Retail</span>
-        <span class="industry-pill">Professional Services</span>
-        <span class="industry-pill">Technology</span>
-        <span class="industry-pill">Startups</span>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     4. ONE DIGITAL PARTNER (ECOSYSTEM)
+     4. BUSINESS ECOSYSTEM SECTION — DIAGRAM VIEW
      ========================================================================== -->
   <section class="section ecosystem-section">
     <div class="container">
-      <div class="ecosystem-grid">
-        <div class="ecosystem-text">
+      <div class="ecosystem-container">
+        <div>
           <div class="eyebrow eyebrow-blue">ONE CONNECTED TEAM</div>
           <h2 class="section-title">
             Your Business Doesn't Need More Vendors.<br>
-            It Needs <span class="highlight-blue">One Digital Partner.</span>
+            It Needs <span class="highlight-blue">ONE DIGITAL PARTNER.</span>
           </h2>
           <p class="section-subtitle" style="margin-bottom: 24px;">
             Your brand, website, marketing, technology and customer journey shouldn't operate as separate pieces. HigherIT brings them together under one roof.
@@ -223,156 +192,159 @@
           </p>
         </div>
 
-        <div class="ecosystem-visual">
-          <svg class="ecosystem-svg-lines">
-            <line x1="50%" y1="50%" x2="20%" y2="10%" />
-            <line x1="50%" y1="50%" x2="75%" y2="5%" />
-            <line x1="50%" y1="50%" x2="92%" y2="40%" />
-            <line x1="50%" y1="50%" x2="80%" y2="90%" />
-            <line x1="50%" y1="50%" x2="20%" y2="90%" />
-            <line x1="50%" y1="50%" x2="8%" y2="40%" />
-          </svg>
-          
-          <div class="ecosystem-core">
+        <div class="ecosystem-diagram">
+          <div class="ecosystem-center">
             <div>YOUR</div>
             <div>BUSINESS</div>
           </div>
 
-          <div class="orbit-node node-brand" data-node="Brand">
-            <i data-lucide="palette"></i>
-            Brand
-          </div>
-          <div class="orbit-node node-website" data-node="Website">
-            <i data-lucide="globe"></i>
-            Website
-          </div>
-          <div class="orbit-node node-marketing" data-node="Marketing">
-            <i data-lucide="trending-up"></i>
-            Marketing
-          </div>
-          <div class="orbit-node node-leads" data-node="Leads">
-            <i data-lucide="users"></i>
-            Leads
-          </div>
-          <div class="orbit-node node-tech" data-node="Technology">
-            <i data-lucide="code-2"></i>
-            Technology
-          </div>
-          <div class="orbit-node node-ai" data-node="AI">
-            <i data-lucide="cpu"></i>
-            AI
-          </div>
+          <div class="eco-node node-1"><i data-lucide="palette"></i> Brand</div>
+          <div class="eco-node node-2"><i data-lucide="globe"></i> Website</div>
+          <div class="eco-node node-3"><i data-lucide="trending-up"></i> Marketing</div>
+          <div class="eco-node node-4"><i data-lucide="users"></i> Leads</div>
+          <div class="eco-node node-5"><i data-lucide="code-2"></i> Technology</div>
+          <div class="eco-node node-6"><i data-lucide="cpu"></i> AI</div>
+          <div class="eco-node node-7"><i data-lucide="bot"></i> Automation</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     5. SERVICES (WHAT WE DO)
+     5. SERVICES — REPLACING CARD WALL WITH 4 DISTINCT ASYMMETRIC CAPABILITY BLOCKS
      ========================================================================== -->
   <section class="section services-section" id="services">
     <div class="container">
-      <div class="section-header text-left">
+      <div class="section-header" style="text-align: left; max-width: 100%; margin-bottom: 80px;">
         <div class="eyebrow">WHAT WE DO</div>
         <h2 class="section-title">
           Everything You Need to <span class="highlight-blue">Grow Digitally.</span>
         </h2>
-        <p class="section-subtitle">
-          Four major capability pillars designed to elevate your brand, capture market share, and automate operations.
-        </p>
       </div>
 
-      <div class="services-grid">
-        <!-- 01 GROW -->
-        <div class="service-card" id="service-grow">
+      <!-- BLOCK 1: GROW -->
+      <div class="capability-block">
+        <div class="cap-split-grid">
           <div>
-            <div class="service-header">
-              <span class="service-num">01 — GROW</span>
-              <div class="service-icon"><i data-lucide="target"></i></div>
+            <div class="cap-num">01 / GROW</div>
+            <h3 class="cap-title">Digital Marketing & Customer Acquisition</h3>
+            <p class="cap-desc">Performance ads, search optimization, and automated lead funnels engineered to scale client revenue consistently.</p>
+            <div class="cap-tags-flex">
+              <span class="cap-tag-pill">Social Media Marketing</span>
+              <span class="cap-tag-pill">Performance Marketing</span>
+              <span class="cap-tag-pill">Meta Ads</span>
+              <span class="cap-tag-pill">Google Ads</span>
+              <span class="cap-tag-pill">SEO & Analytics</span>
+              <span class="cap-tag-pill">Lead Generation</span>
             </div>
-            <h3 class="service-title">Digital Marketing</h3>
-            <p class="service-tagline">Grow Your Business & Customer Reach</p>
-            <div class="service-tags">
-              <span class="service-tag">Social Media Marketing</span>
-              <span class="service-tag">Performance Marketing</span>
-              <span class="service-tag">Meta Ads</span>
-              <span class="service-tag">Google Ads</span>
-              <span class="service-tag">SEO & Analytics</span>
-              <span class="service-tag">Lead Generation</span>
-            </div>
+            <a href="#contact" class="btn btn-primary">Explore Digital Marketing →</a>
           </div>
-          <a href="#contact" class="service-cta">Explore Digital Marketing →</a>
-        </div>
 
-        <!-- 02 CREATE -->
-        <div class="service-card" id="service-create">
-          <div>
-            <div class="service-header">
-              <span class="service-num">02 — CREATE</span>
-              <div class="service-icon"><i data-lucide="palette"></i></div>
+          <div class="widget-ad-metrics">
+            <div style="font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem; color: var(--brand-orange); margin-bottom: 20px;">
+              Live Performance Dashboard
             </div>
-            <h3 class="service-title">Brand & Creative</h3>
-            <p class="service-tagline">Create Impact & Memorable Identities</p>
-            <div class="service-tags">
-              <span class="service-tag">Brand Strategy</span>
-              <span class="service-tag">Visual Identity</span>
-              <span class="service-tag">Logo Design</span>
-              <span class="service-tag">UI/UX Design</span>
-              <span class="service-tag">Social Media Creatives</span>
-              <span class="service-tag">Video & CGI</span>
-              <span class="service-tag">AI Creative</span>
+            <div class="widget-metric-row">
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-dark-secondary);">Return On Ad Spend (ROAS)</div>
+                <div class="widget-metric-val">+340%</div>
+              </div>
+              <i data-lucide="trending-up" style="color: var(--brand-orange);"></i>
+            </div>
+            <div class="widget-metric-row">
+              <div>
+                <div style="font-size: 0.85rem; color: var(--text-dark-secondary);">Qualified Enquiries / Month</div>
+                <div class="widget-metric-val" style="color: var(--brand-blue-light);">12,450+</div>
+              </div>
+              <i data-lucide="users" style="color: var(--brand-blue-light);"></i>
             </div>
           </div>
-          <a href="#contact" class="service-cta">Explore Creative →</a>
         </div>
+      </div>
 
-        <!-- 03 BUILD -->
-        <div class="service-card" id="service-build">
-          <div>
-            <div class="service-header">
-              <span class="service-num">03 — BUILD</span>
-              <div class="service-icon"><i data-lucide="laptop"></i></div>
+      <!-- BLOCK 2: CREATE -->
+      <div class="capability-block">
+        <div class="cap-split-grid">
+          <div style="background: var(--bg-light); border: 1px solid var(--border-light); border-radius: var(--border-radius-xl); padding: 40px;">
+            <div style="display: flex; gap: 12px; margin-bottom: 24px;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--brand-orange);"></div>
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--brand-blue);"></div>
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: #0F172A;"></div>
             </div>
-            <h3 class="service-title">Web & App Development</h3>
-            <p class="service-tagline">Build Your High-Performance Digital Presence</p>
-            <div class="service-tags">
-              <span class="service-tag">Business Websites</span>
-              <span class="service-tag">Web Applications</span>
-              <span class="service-tag">E-commerce Solutions</span>
-              <span class="service-tag">Mobile Applications</span>
-              <span class="service-tag">SaaS Platforms</span>
-              <span class="service-tag">Custom Dashboards</span>
-            </div>
+            <div style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; margin-bottom: 8px;">Visual Identity & Brand System</div>
+            <p style="font-size: 0.95rem; color: var(--text-light-secondary);">Crafting distinct visual language, typography systems, and CGI design assets that position companies as category leaders.</p>
           </div>
-          <a href="#contact" class="service-cta">Explore Development →</a>
+
+          <div>
+            <div class="cap-num">02 / CREATE</div>
+            <h3 class="cap-title">Brand & Creative Studio</h3>
+            <p class="cap-desc">Positioning clarity, high-trust design systems, UI/UX aesthetics, and CGI creative campaigns that make brands unforgettable.</p>
+            <div class="cap-tags-flex">
+              <span class="cap-tag-pill">Brand Strategy</span>
+              <span class="cap-tag-pill">Visual Identity</span>
+              <span class="cap-tag-pill">Logo Design</span>
+              <span class="cap-tag-pill">UI/UX Design</span>
+              <span class="cap-tag-pill">Video & CGI</span>
+              <span class="cap-tag-pill">AI Creative</span>
+            </div>
+            <a href="#contact" class="btn btn-secondary" style="color: var(--text-light-primary); border-color: var(--border-light);">Explore Creative →</a>
+          </div>
         </div>
+      </div>
 
-        <!-- 04 INTELLIGENCE -->
-        <div class="service-card" id="service-intelligence">
-          <div>
-            <div class="service-header">
-              <span class="service-num">04 — INTELLIGENCE</span>
-              <div class="service-icon" style="color: var(--brand-orange); background: rgba(255, 122, 0, 0.1);"><i data-lucide="bot"></i></div>
+      <!-- BLOCK 3: BUILD -->
+      <div class="capability-block">
+        <div class="cap-full-dark">
+          <div class="cap-split-grid">
+            <div>
+              <div class="cap-num">03 / BUILD</div>
+              <h3 class="cap-title" style="color: #FFFFFF;">Web & Application Engineering</h3>
+              <p class="cap-desc">High-performance business websites, web applications, e-commerce systems, and custom SaaS software platforms built to scale.</p>
+              <div class="cap-tags-flex">
+                <span class="cap-tag-pill" style="background: rgba(255,255,255,0.06); color: #FFFFFF; border-color: var(--border-dark);">Business Websites</span>
+                <span class="cap-tag-pill" style="background: rgba(255,255,255,0.06); color: #FFFFFF; border-color: var(--border-dark);">Web Applications</span>
+                <span class="cap-tag-pill" style="background: rgba(255,255,255,0.06); color: #FFFFFF; border-color: var(--border-dark);">E-commerce</span>
+                <span class="cap-tag-pill" style="background: rgba(255,255,255,0.06); color: #FFFFFF; border-color: var(--border-dark);">SaaS Platforms</span>
+              </div>
+              <a href="#contact" class="btn btn-blue">Explore Development →</a>
             </div>
-            <h3 class="service-title">AI & Automation</h3>
-            <p class="service-tagline">Make Your Business Intelligent & Automated</p>
-            <div class="service-tags">
-              <span class="service-tag">AI Chatbots</span>
-              <span class="service-tag">AI Employees</span>
-              <span class="service-tag">Workflow Automation</span>
-              <span class="service-tag">Lead Automation</span>
-              <span class="service-tag">AI Content Systems</span>
-              <span class="service-tag">Custom AI Solutions</span>
+
+            <div class="code-snippet-box">
+              // HigherIT Tech Stack Architecture<br>
+              const stack = {<br>
+              &nbsp;&nbsp;frontend: ['Vite', 'Modern ES Modules', 'Vanilla CSS'],<br>
+              &nbsp;&nbsp;backend: ['Node.js', 'REST & GraphQL API'],<br>
+              &nbsp;&nbsp;performance: 'Lighthouse Score 98+'<br>
+              };
             </div>
           </div>
-          <a href="#contact" class="service-cta" style="color: var(--brand-orange);">Explore AI Solutions →</a>
+        </div>
+      </div>
+
+      <!-- BLOCK 4: INTELLIGENCE -->
+      <div class="capability-block">
+        <div class="cap-split-grid">
+          <div>
+            <div class="cap-num">04 / INTELLIGENCE</div>
+            <h3 class="cap-title">AI & Business Automation</h3>
+            <p class="cap-desc">Deploy intelligent AI chatbots, AI virtual employees, automated lead routing, and WhatsApp workflows to eliminate operational friction.</p>
+            <a href="#contact" class="btn btn-primary">Explore AI Solutions →</a>
+          </div>
+
+          <div style="background: var(--bg-dark-card); border: 1px solid var(--border-dark-hover); border-radius: var(--border-radius-xl); padding: 40px; color: #FFFFFF;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+              <i data-lucide="bot" style="color: var(--brand-orange);"></i>
+              <span style="font-family: var(--font-heading); font-weight: 700;">AI Lead Assistant Active</span>
+            </div>
+            <p style="font-size: 0.9rem; color: var(--text-dark-secondary);">"Hello! I answered 48 client enquiries and scheduled 12 strategy calls today while your team focused on execution."</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     6. THE HIGHERIT WAY (PROCESS)
+     6. THE HIGHERIT WAY — CINEMATIC 7-STAGE PROCESS TIMELINE
      ========================================================================== -->
   <section class="section process-section" id="process">
     <div class="container">
@@ -381,197 +353,161 @@
         <h2 class="section-title">
           Strategy First. Technology Second. <span class="highlight-orange">Growth Always.</span>
         </h2>
-        <p class="section-subtitle">
-          We don't believe in creating digital assets just because everyone else has them. Every website, campaign, application and automation should have a clear purpose.
-        </p>
       </div>
 
-      <div class="process-timeline">
-        <div class="process-step">
-          <div class="step-icon-wrapper"><i data-lucide="search"></i></div>
-          <span class="step-number">01 — DISCOVER</span>
-          <h4 class="step-title">Understand</h4>
-          <p class="step-desc">Deep dive into your business model, target audience, and growth levers.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-icon-wrapper"><i data-lucide="compass"></i></div>
-          <span class="step-number">02 — STRATEGIZE</span>
-          <h4 class="step-title">Roadmap</h4>
-          <p class="step-desc">Create a clear architecture, growth roadmap, and technical milestones.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-icon-wrapper"><i data-lucide="pen-tool"></i></div>
-          <span class="step-number">03 — CREATE</span>
-          <h4 class="step-title">Build</h4>
-          <p class="step-desc">Design the user experience and develop high-performance solutions.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-icon-wrapper"><i data-lucide="rocket"></i></div>
-          <span class="step-number">04 — LAUNCH</span>
-          <h4 class="step-title">Activate</h4>
-          <p class="step-desc">Bring everything together live with full QA and optimization.</p>
-        </div>
-        <div class="process-step">
-          <div class="step-icon-wrapper"><i data-lucide="bar-chart-3"></i></div>
-          <span class="step-number">05 — SCALE</span>
-          <h4 class="step-title">Optimize</h4>
-          <p class="step-desc">Measure, continuously optimize, and deploy AI automation.</p>
+      <div class="process-trajectory-container">
+        <svg class="process-curve-svg" viewBox="0 0 1200 60" fill="none">
+          <path d="M0 30 Q 300 0, 600 30 T 1200 30" stroke="var(--brand-orange)" stroke-width="3" stroke-dasharray="8" />
+        </svg>
+
+        <div class="process-steps-7">
+          <div class="p-step-card">
+            <div class="p-step-num">01</div>
+            <div class="p-step-name">Discover</div>
+            <div class="p-step-desc">Business model & goals</div>
+          </div>
+          <div class="p-step-card">
+            <div class="p-step-num">02</div>
+            <div class="p-step-name">Define</div>
+            <div class="p-step-desc">Target audience analysis</div>
+          </div>
+          <div class="p-step-card">
+            <div class="p-step-num">03</div>
+            <div class="p-step-name">Strategize</div>
+            <div class="p-step-desc">Growth & tech roadmap</div>
+          </div>
+          <div class="p-step-card">
+            <div class="p-step-num">04</div>
+            <div class="p-step-name">Create</div>
+            <div class="p-step-desc">Design & engineering</div>
+          </div>
+          <div class="p-step-card">
+            <div class="p-step-num">05</div>
+            <div class="p-step-name">Launch</div>
+            <div class="p-step-desc">Full QA & activation</div>
+          </div>
+          <div class="p-step-card">
+            <div class="p-step-num">06</div>
+            <div class="p-step-name">Optimize</div>
+            <div class="p-step-desc">Data-driven iteration</div>
+          </div>
+          <div class="p-step-card">
+            <div class="p-step-num">07</div>
+            <div class="p-step-name">Scale</div>
+            <div class="p-step-desc">AI & process leverage</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     7. WHY HIGHERIT
+     7. WHY HIGHERIT — STATEMENT & STAGGERED REVEAL
      ========================================================================== -->
   <section class="section why-section" id="about">
     <div class="container">
-      <div class="section-header">
-        <div class="eyebrow eyebrow-blue">WHY HIGHERIT</div>
-        <h2 class="section-title">
-          Different Thinking. <span class="highlight-blue">Better Execution.</span>
-        </h2>
-      </div>
+      <h2 class="why-statement">
+        One Team. One Strategy.<br>
+        <span class="highlight-blue">One Digital Ecosystem.</span>
+      </h2>
 
-      <div class="why-grid">
-        <div class="why-card">
-          <div class="why-icon"><i data-lucide="briefcase"></i></div>
-          <h3 class="why-title">Business First</h3>
-          <p class="why-desc">We start by understanding your unit economics, offer, and business goals before writing code or running ads.</p>
+      <div class="why-list-rows">
+        <div class="why-row-item">
+          <div class="why-row-idx">01</div>
+          <div class="why-row-title">Business First</div>
+          <div class="why-row-desc">We start by understanding your unit economics, offer, and business goals before writing code or running ads.</div>
         </div>
-        <div class="why-card">
-          <div class="why-icon" style="color: var(--brand-blue); background: rgba(11, 99, 246, 0.1);"><i data-lucide="users"></i></div>
-          <h3 class="why-title">One Connected Team</h3>
-          <p class="why-desc">Strategy, design, development, marketing and AI specialists work seamlessly together without agency friction.</p>
+        <div class="why-row-item">
+          <div class="why-row-idx">02</div>
+          <div class="why-row-title">One Connected Team</div>
+          <div class="why-row-desc">Strategy, design, development, marketing and AI specialists work seamlessly together without agency friction.</div>
         </div>
-        <div class="why-card">
-          <div class="why-icon"><i data-lucide="layers"></i></div>
-          <h3 class="why-title">Built to Scale</h3>
-          <p class="why-desc">We engineer scalable digital infrastructure, design systems, and robust web applications built to evolve with your business.</p>
+        <div class="why-row-item">
+          <div class="why-row-idx">03</div>
+          <div class="why-row-title">Built to Scale</div>
+          <div class="why-row-desc">We engineer scalable digital infrastructure, design systems, and robust web applications built to evolve with your business.</div>
         </div>
-        <div class="why-card">
-          <div class="why-icon" style="color: var(--brand-blue); background: rgba(11, 99, 246, 0.1);"><i data-lucide="cpu"></i></div>
-          <h3 class="why-title">AI-First Thinking</h3>
-          <p class="why-desc">We identify repetitive friction points where AI and automation deliver massive operational leverage for your team.</p>
+        <div class="why-row-item">
+          <div class="why-row-idx">04</div>
+          <div class="why-row-title">AI-First Thinking</div>
+          <div class="why-row-desc">We identify repetitive friction points where AI and automation deliver massive operational leverage for your team.</div>
         </div>
-        <div class="why-card">
-          <div class="why-icon"><i data-lucide="shield-check"></i></div>
-          <h3 class="why-title">Transparent Collaboration</h3>
-          <p class="why-desc">No black boxes. You always have full visibility into our roadmaps, campaign performance, and project sprints.</p>
+        <div class="why-row-item">
+          <div class="why-row-idx">05</div>
+          <div class="why-row-title">Transparent Collaboration</div>
+          <div class="why-row-desc">No black boxes. You always have full visibility into our roadmaps, campaign performance, and project sprints.</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     8. NUMBERS / STATS COUNTER
+     8. STATS BAND
      ========================================================================== -->
-  <section class="numbers-section" id="numbers">
+  <section class="stats-band" id="numbers">
     <div class="container">
-      <div class="numbers-grid">
-        <div class="number-card">
-          <div class="number-big counter-value" data-target="300">0+</div>
-          <div class="number-title">Businesses Served</div>
-          <div class="number-subtitle">From local brands to national enterprises</div>
+      <div class="stats-grid">
+        <div>
+          <div class="stat-giant counter-value" data-target="300">0<span>+</span></div>
+          <div class="stat-lbl">Businesses Served</div>
         </div>
-        <div class="number-card">
-          <div class="number-big counter-value" data-target="150">0+</div>
-          <div class="number-title">Projects Delivered</div>
-          <div class="number-subtitle">Across web, mobile, brand and AI</div>
+        <div>
+          <div class="stat-giant counter-value" data-target="150">0<span>+</span></div>
+          <div class="stat-lbl">Projects Delivered</div>
         </div>
-        <div class="number-card">
-          <div class="number-big counter-value" data-target="50">0+</div>
-          <div class="number-title">Active Clients</div>
-          <div class="number-subtitle">Long-term growth partnerships</div>
+        <div>
+          <div class="stat-giant counter-value" data-target="50">0<span>+</span></div>
+          <div class="stat-lbl">Active Clients</div>
         </div>
-        <div class="number-card">
-          <div class="number-big counter-value" data-target="4">0+</div>
-          <div class="number-title">Years of Experience</div>
-          <div class="number-subtitle">Pioneering technology & marketing</div>
+        <div>
+          <div class="stat-giant counter-value" data-target="4">0<span>+</span></div>
+          <div class="stat-lbl">Years Experience</div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     9. FEATURED WORK (SELECTED WORK)
+     9. SELECTED WORK — ASYMMETRIC CASE STUDY SHOWCASE
      ========================================================================== -->
   <section class="section work-section" id="work">
     <div class="container">
-      <div class="section-header text-left" style="display: flex; justify-content: space-between; align-items: flex-end; max-width: 100%;">
-        <div>
-          <div class="eyebrow">SELECTED WORK</div>
-          <h2 class="section-title" style="margin-bottom: 0;">Real Projects. <span class="highlight-blue">Real Results.</span></h2>
-        </div>
-        <a href="#contact" class="btn btn-light-outline">View All Projects →</a>
+      <div class="section-header" style="text-align: left; max-width: 100%; margin-bottom: 60px;">
+        <div class="eyebrow">SELECTED WORK</div>
+        <h2 class="section-title">Real Projects. <span class="highlight-blue">Real Results.</span></h2>
       </div>
 
-      <div class="work-grid">
-        <!-- Akshaya Hospital -->
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <img src="assets/images/case_akshaya.png" alt="Akshaya Hospital Website Preview" width="600" height="280" loading="lazy">
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Healthcare</span>
-              <span class="project-tag">Web</span>
-              <span class="project-tag">Digital Growth</span>
-            </div>
-            <h3 class="project-title">Akshaya Hospital</h3>
-            <p class="project-desc">Modern website & digital marketing campaign that strengthened their online presence and increased patient appointment enquiries.</p>
-            <a href="#contact" class="project-link">View Case Study →</a>
+      <!-- Hero Featured Case Study -->
+      <div class="case-hero-card">
+        <div class="case-hero-content">
+          <span class="eyebrow eyebrow-blue" style="width: fit-content;">FEATURED CASE STUDY</span>
+          <h3 style="font-family: var(--font-heading); font-size: 2.2rem; font-weight: 800; margin-bottom: 16px;">Akshaya Hospital</h3>
+          <p style="font-size: 1.05rem; color: var(--text-dark-secondary); margin-bottom: 24px;">Healthcare • Web Development • Digital Growth</p>
+          <p style="font-size: 0.95rem; color: var(--text-dark-muted); margin-bottom: 32px; line-height: 1.6;">
+            Transformed digital presence with a modern patient-first web application and performance campaigns that increased online appointment enquiries significantly.
+          </p>
+          <a href="#contact" class="btn btn-primary" style="width: fit-content;">View Case Study →</a>
+        </div>
+        <img src="assets/images/case_akshaya.png" alt="Akshaya Hospital Website Preview" class="case-hero-img">
+      </div>
+
+      <!-- Secondary 2-Column Grid -->
+      <div class="case-secondary-grid">
+        <div class="case-card">
+          <img src="assets/images/case_flamex.png" alt="FlameX Preview" class="case-card-img">
+          <div class="case-card-body">
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; margin-bottom: 8px;">FlameX</h4>
+            <p style="font-size: 0.85rem; color: var(--brand-orange); font-weight: 700; margin-bottom: 12px;">Branding • Website • Creative</p>
+            <p style="font-size: 0.9rem; color: var(--text-light-secondary);">A bold visual brand identity and digital e-commerce experience engineered to establish market authority.</p>
           </div>
         </div>
 
-        <!-- FlameX -->
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <img src="assets/images/case_flamex.png" alt="FlameX Brand Identity Preview" width="600" height="280" loading="lazy">
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Branding</span>
-              <span class="project-tag">Website</span>
-              <span class="project-tag">Creative</span>
-            </div>
-            <h3 class="project-title">FlameX</h3>
-            <p class="project-desc">A bold visual brand identity and digital e-commerce experience engineered to establish market authority.</p>
-            <a href="#contact" class="project-link">View Case Study →</a>
-          </div>
-        </div>
-
-        <!-- Somarka Events -->
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <img src="assets/images/hero_rocket.png" alt="Somarka Events Digital Marketing Preview" width="600" height="280" loading="lazy">
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Branding</span>
-              <span class="project-tag">Website</span>
-              <span class="project-tag">Digital Marketing</span>
-            </div>
-            <h3 class="project-title">Somarka Events</h3>
-            <p class="project-desc">Creative branding and performance digital marketing that helped them reach event organizers and corporate clients.</p>
-            <a href="#contact" class="project-link">View Case Study →</a>
-          </div>
-        </div>
-
-        <!-- 4D Derma Den -->
-        <div class="project-card">
-          <div class="project-img-wrapper">
-            <img src="assets/images/case_akshaya.png" alt="4D Derma Den Clinical Website Preview" width="600" height="280" loading="lazy">
-          </div>
-          <div class="project-body">
-            <div class="project-tags">
-              <span class="project-tag">Healthcare</span>
-              <span class="project-tag">Branding</span>
-              <span class="project-tag">Website</span>
-            </div>
-            <h3 class="project-title">4D Derma Den</h3>
-            <p class="project-desc">Clean, modern digital experience designed around patient trust, treatment transparency, and booking convenience.</p>
-            <a href="#contact" class="project-link">View Case Study →</a>
+        <div class="case-card">
+          <img src="assets/images/hero_rocket.png" alt="Somarka Events Preview" class="case-card-img">
+          <div class="case-card-body">
+            <h4 style="font-family: var(--font-heading); font-size: 1.5rem; font-weight: 800; margin-bottom: 8px;">Somarka Events</h4>
+            <p style="font-size: 0.85rem; color: var(--brand-blue); font-weight: 700; margin-bottom: 12px;">Branding • Digital Marketing</p>
+            <p style="font-size: 0.9rem; color: var(--text-light-secondary);">Creative branding and performance digital marketing that helped them reach corporate event organizers.</p>
           </div>
         </div>
       </div>
@@ -583,466 +519,230 @@
      ========================================================================== -->
   <section class="section ai-section" id="ai">
     <div class="container">
-      <div class="ai-card-wrapper">
-        <div class="section-header" style="margin-bottom: 32px;">
+      <div class="ai-core-layout">
+        <div class="section-header">
           <div class="eyebrow">THE FUTURE IS INTELLIGENT</div>
           <h2 class="section-title">
-            AI Can Work. <span class="highlight-orange">So You Can Grow.</span>
+            What If Your Business <span class="highlight-orange">Had an AI Team?</span>
           </h2>
           <p class="section-subtitle">
             AI isn't just about generating text or images. Used correctly, custom AI agents and workflow automation handle repetitive operations, qualify leads 24/7, and multiply team productivity.
           </p>
         </div>
 
-        <div class="ai-grid">
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon"><i data-lucide="message-square-code"></i></div>
-            <h3 class="ai-feature-title">AI Chatbots</h3>
-            <p class="ai-feature-desc">24/7 intelligent customer support agents that answer enquiries and book appointments automatically.</p>
+        <div class="ai-satellites-grid">
+          <div class="ai-sat-card">
+            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">AI Customer Support</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dark-secondary);">24/7 instant customer enquiry response across web and WhatsApp.</p>
           </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon"><i data-lucide="user-check"></i></div>
-            <h3 class="ai-feature-title">AI Lead Assistant</h3>
-            <p class="ai-feature-desc">Capture, qualify, and route high-intent leads to your sales team instantly without manual delay.</p>
+          <div class="ai-sat-card">
+            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">AI Lead Assistant</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dark-secondary);">Qualify, rank, and assign incoming high-intent leads automatically.</p>
           </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon"><i data-lucide="file-text"></i></div>
-            <h3 class="ai-feature-title">AI Content Engine</h3>
-            <p class="ai-feature-desc">Create localized, on-brand marketing content and social media assets 10x faster with AI workflows.</p>
+          <div class="ai-sat-card">
+            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">AI Content Engine</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dark-secondary);">Generate localized marketing assets 10x faster with AI workflows.</p>
           </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon"><i data-lucide="bot"></i></div>
-            <h3 class="ai-feature-title">AI Employees</h3>
-            <p class="ai-feature-desc">Virtual team members trained on your specific business knowledge to perform routine tasks autonomously.</p>
+          <div class="ai-sat-card">
+            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">AI Employees</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dark-secondary);">Virtual team members trained on proprietary business datasets.</p>
           </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon"><i data-lucide="workflow"></i></div>
-            <h3 class="ai-feature-title">Workflow Automation</h3>
-            <p class="ai-feature-desc">Connect CRM, email, WhatsApp, and internal databases to eliminate manual data entry.</p>
+          <div class="ai-sat-card">
+            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">Workflow Automation</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dark-secondary);">Connect CRM, email, and internal databases to eliminate manual work.</p>
           </div>
-          <div class="ai-feature-card">
-            <div class="ai-feature-icon"><i data-lucide="sparkles"></i></div>
-            <h3 class="ai-feature-title">Custom AI Solutions</h3>
-            <p class="ai-feature-desc">Bespoke LLM integrations and machine learning models tailored specifically to your company dataset.</p>
+          <div class="ai-sat-card">
+            <h4 style="font-family: var(--font-heading); font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">Custom AI Solutions</h4>
+            <p style="font-size: 0.85rem; color: var(--text-dark-secondary);">Bespoke machine learning models tailored to company datasets.</p>
           </div>
-        </div>
-
-        <div style="text-align: center; margin-top: 40px;">
-          <a href="#contact" class="btn btn-blue">
-            Explore AI Solutions
-            <span class="btn-arrow">→</span>
-          </a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     11. INDUSTRIES
+     11. INTERACTIVE INDUSTRY EXPLORER
      ========================================================================== -->
   <section class="section industries-section" id="industries">
     <div class="container">
       <div class="section-header">
         <div class="eyebrow">INDUSTRIES WE SERVE</div>
-        <h2 class="section-title">
-          Solutions for <span class="highlight-blue">Every Industry.</span>
-        </h2>
-        <p class="section-subtitle">Different industries. Different challenges. One digital mindset.</p>
+        <h2 class="section-title">Solutions for <span class="highlight-blue">Every Industry.</span></h2>
       </div>
 
-      <div class="industries-grid">
-        <div class="industry-card">
-          <div class="industry-card-icon"><i data-lucide="heart-pulse"></i></div>
-          <h3 class="industry-card-title">Healthcare</h3>
-          <p class="industry-card-desc">Build trust & improve patient engagement</p>
+      <div class="ind-explorer-grid">
+        <div class="ind-tab-list">
+          <button class="ind-tab-btn active" data-ind="healthcare">Healthcare</button>
+          <button class="ind-tab-btn" data-ind="realestate">Real Estate</button>
+          <button class="ind-tab-btn" data-ind="education">Education</button>
+          <button class="ind-tab-btn" data-ind="retail">Retail & E-commerce</button>
+          <button class="ind-tab-btn" data-ind="hospitality">Hospitality</button>
+          <button class="ind-tab-btn" data-ind="services">Professional Services</button>
+          <button class="ind-tab-btn" data-ind="startups">Startups & Tech</button>
         </div>
-        <div class="industry-card">
-          <div class="industry-card-icon"><i data-lucide="building"></i></div>
-          <h3 class="industry-card-title">Real Estate</h3>
-          <p class="industry-card-desc">Generate enquiries & close more deals</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-card-icon"><i data-lucide="graduation-cap"></i></div>
-          <h3 class="industry-card-title">Education</h3>
-          <p class="industry-card-desc">Connect institutions with students</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-card-icon"><i data-lucide="shopping-bag"></i></div>
-          <h3 class="industry-card-title">Retail & E-commerce</h3>
-          <p class="industry-card-desc">Convert visitors into loyal customers</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-card-icon"><i data-lucide="coffee"></i></div>
-          <h3 class="industry-card-title">Hospitality</h3>
-          <p class="industry-card-desc">Create experiences that bring guests back</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-card-icon"><i data-lucide="briefcase"></i></div>
-          <h3 class="industry-card-title">Professional Services</h3>
-          <p class="industry-card-desc">Build authority & generate opportunities</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-card-icon"><i data-lucide="rocket"></i></div>
-          <h3 class="industry-card-title">Startups</h3>
-          <p class="industry-card-desc">From idea to MVP to market launch</p>
-        </div>
-        <div class="industry-card">
-          <div class="industry-card-icon"><i data-lucide="store"></i></div>
-          <h3 class="industry-card-title">Local Businesses</h3>
-          <p class="industry-card-desc">Grow locally and scale consistently</p>
+
+        <div class="ind-detail-panel" id="indDetailPanel">
+          <h3 style="font-family: var(--font-heading); font-size: 2rem; font-weight: 800; margin-bottom: 16px; color: var(--brand-blue);" id="indTitle">Healthcare Digital Solutions</h3>
+          <p style="font-size: 1.05rem; color: var(--text-light-secondary); margin-bottom: 24px;" id="indChallenge">Challenge: Patient trust, fragmented booking systems, and low online visibility for specialized medical treatments.</p>
+          <div style="background: var(--bg-light); border: 1px solid var(--border-light); padding: 24px; border-radius: var(--border-radius-md); margin-bottom: 24px;">
+            <div style="font-weight: 700; font-family: var(--font-heading); margin-bottom: 8px;" id="indSolution">HigherIT Solution: High-trust hospital portals, online appointment scheduling, SEO for medical treatments, and AI receptionist automation.</div>
+          </div>
+          <a href="#contact" class="btn btn-primary">Explore Industry Solution →</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     12. RESULTS
-     ========================================================================== -->
-  <section class="results-section">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-title">Because Beautiful Isn't Enough.</h2>
-        <p class="section-subtitle">
-          A beautiful website is great. A creative campaign is great. But what really matters is what happens after launch.
-        </p>
-      </div>
-
-      <div class="results-grid">
-        <div class="result-card">
-          <div class="result-category">Website Traffic</div>
-          <div class="result-outcome">Organic visibility & qualified audience acquisition</div>
-        </div>
-        <div class="result-card">
-          <div class="result-category">Qualified Leads</div>
-          <div class="result-outcome">High-intent client enquiries routed directly to sales</div>
-        </div>
-        <div class="result-card">
-          <div class="result-category">ROAS</div>
-          <div class="result-outcome">Optimized ad spending delivering positive return</div>
-        </div>
-        <div class="result-card">
-          <div class="result-category">Conversions</div>
-          <div class="result-outcome">High-converting landing pages & user journeys</div>
-        </div>
-        <div class="result-card">
-          <div class="result-category">Time Saved</div>
-          <div class="result-outcome">Automated repetitive tasks through AI workflows</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-     13. TESTIMONIALS
-     ========================================================================== -->
-  <section class="section testimonials-section" id="testimonials">
-    <div class="container">
-      <div class="section-header">
-        <div class="eyebrow eyebrow-blue">CLIENTS LOVE WORKING WITH US</div>
-        <h2 class="section-title">
-          Good Work Gets Noticed. <span class="highlight-blue">Great Work Gets Remembered.</span>
-        </h2>
-      </div>
-
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div>
-            <div class="stars-row">★★★★★</div>
-            <p class="testimonial-text">"HigherIT has been instrumental in our digital growth. Their strategic digital marketing solutions have positioned us as a trusted brand in our industry."</p>
-          </div>
-          <div class="author-info">
-            <div class="author-avatar">SL</div>
-            <div>
-              <div class="author-name">Shopping Lovers</div>
-              <div class="author-time">Google Review</div>
-            </div>
-            <svg class="google-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div>
-            <div class="stars-row">★★★★★</div>
-            <p class="testimonial-text">"Their team understood our vision perfectly and built a website that is fast, modern and extremely easy to manage."</p>
-          </div>
-          <div class="author-info">
-            <div class="author-avatar" style="background: var(--brand-orange);">RC</div>
-            <div>
-              <div class="author-name">Raveenappa Cheruku</div>
-              <div class="author-time">Google Review</div>
-            </div>
-            <svg class="google-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div>
-            <div class="stars-row">★★★★★</div>
-            <p class="testimonial-text">"From concept to execution, HigherIT's app development services were outstanding. Highly recommended!"</p>
-          </div>
-          <div class="author-info">
-            <div class="author-avatar">YL</div>
-            <div>
-              <div class="author-name">Yashna Devi Lingam</div>
-              <div class="author-time">Google Review</div>
-            </div>
-            <svg class="google-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <div>
-            <div class="stars-row">★★★★★</div>
-            <p class="testimonial-text">"Professional, creative and result-driven team. Our client enquiries increased significantly after their campaigns."</p>
-          </div>
-          <div class="author-info">
-            <div class="author-avatar" style="background: var(--brand-orange);">SP</div>
-            <div>
-              <div class="author-name">Sanjay Praneeth</div>
-              <div class="author-time">Google Review</div>
-            </div>
-            <svg class="google-icon" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/></svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-     14. ABOUT HIGHERIT
-     ========================================================================== -->
-  <section class="section about-section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text">
-          <div class="eyebrow">WHO WE ARE</div>
-          <h2 class="section-title">
-            We Believe Every Business Can <span class="highlight-blue">Go Higher.</span>
-          </h2>
-          <p>
-            HigherIT was built with a simple belief: Technology should make business better. Not more complicated. Not more expensive. Better.
-          </p>
-          <p>
-            We combine creativity, technology, digital marketing and emerging AI to help businesses move from where they are today to where they want to be tomorrow.
-          </p>
-          <a href="#contact" class="btn btn-primary" style="margin-top: 12px;">More About HigherIT →</a>
-        </div>
-        <div class="about-visual">
-          <div style="background: linear-gradient(135deg, #0A0F1D 0%, #030712 100%); border-radius: var(--border-radius-xl); padding: 48px; border: 1px solid var(--border-dark); box-shadow: var(--shadow-lg);">
-            <i data-lucide="quote" style="width: 48px; height: 48px; color: var(--brand-orange); margin-bottom: 24px;"></i>
-            <p style="font-size: 1.25rem; font-family: var(--font-heading); font-weight: 700; color: #FFFFFF; line-height: 1.6;">
-              "Our goal isn't just to deliver a project. It's to construct an enduring digital engine that drives client revenue, automated leverage, and industry dominance."
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================================================
-     15. PRODUCTS (SAAS PREVIEWS)
+     12. SAAS PRODUCTS SHOWCASE
      ========================================================================== -->
   <section class="section products-section" id="products">
     <div class="container">
       <div class="section-header">
         <div class="eyebrow eyebrow-blue">OUR PRODUCTS</div>
         <h2 class="section-title">
-          We Don't Just Build for Businesses.<br>
-          <span class="highlight-orange">We Build Products for Them.</span>
+          We Don't Just Build For Businesses.<br>
+          <span class="highlight-orange">We Build Products For Them.</span>
         </h2>
-        <p class="section-subtitle">HigherIT engineers proprietary software platforms for industry verticals.</p>
       </div>
 
       <div class="products-grid">
-        <div class="product-card">
-          <div class="product-mockup">
-            <div class="mockup-bar">
-              <div class="mockup-dot"></div><div class="mockup-dot"></div><div class="mockup-dot"></div>
-            </div>
-            <div class="mockup-content">
-              <i data-lucide="gem" style="margin-right: 8px;"></i> Jewellery Retail & POS
-            </div>
+        <div class="product-saas-card">
+          <div class="saas-ui-preview">
+            <div style="font-family: var(--font-heading); font-size: 0.85rem; font-weight: 800; color: var(--brand-orange); margin-bottom: 8px;">JEWELLERY POS & STORE</div>
+            <div style="height: 8px; width: 60%; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 6px;"></div>
+            <div style="height: 8px; width: 85%; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
           </div>
-          <h3 class="product-title">Jewellery E-commerce & Billing</h3>
-          <p class="product-desc">Omnichannel retail, inventory management, custom gold rate billing, and online store platform for modern jewelers.</p>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Jewellery E-commerce & Billing</h3>
+          <p style="font-size: 0.9rem; color: var(--text-dark-secondary);">Omnichannel retail, inventory management, gold rate billing, and online store platform.</p>
         </div>
 
-        <div class="product-card">
-          <div class="product-mockup">
-            <div class="mockup-bar">
-              <div class="mockup-dot"></div><div class="mockup-dot"></div><div class="mockup-dot"></div>
-            </div>
-            <div class="mockup-content">
-              <i data-lucide="camera" style="margin-right: 8px;"></i> Photographer Studio CRM
-            </div>
+        <div class="product-saas-card">
+          <div class="saas-ui-preview">
+            <div style="font-family: var(--font-heading); font-size: 0.85rem; font-weight: 800; color: var(--brand-blue-light); margin-bottom: 8px;">PHOTOGRAPHER CRM</div>
+            <div style="height: 8px; width: 70%; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 6px;"></div>
+            <div style="height: 8px; width: 40%; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
           </div>
-          <h3 class="product-title">Photographer CRM</h3>
-          <p class="product-desc">End-to-end client booking, event scheduling, gallery delivery, contract signing, and payment automation software.</p>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Photographer CRM</h3>
+          <p style="font-size: 0.9rem; color: var(--text-dark-secondary);">Booking, event scheduling, gallery delivery, contract signing, and payment automation.</p>
         </div>
 
-        <div class="product-card">
-          <div class="product-mockup">
-            <div class="mockup-bar">
-              <div class="mockup-dot"></div><div class="mockup-dot"></div><div class="mockup-dot"></div>
-            </div>
-            <div class="mockup-content">
-              <i data-lucide="map-pin" style="margin-right: 8px;"></i> Real Estate Plot CRM
-            </div>
+        <div class="product-saas-card">
+          <div class="saas-ui-preview">
+            <div style="font-family: var(--font-heading); font-size: 0.85rem; font-weight: 800; color: var(--brand-orange); margin-bottom: 8px;">REAL ESTATE PLOT CRM</div>
+            <div style="height: 8px; width: 90%; background: rgba(255,255,255,0.1); border-radius: 4px; margin-bottom: 6px;"></div>
+            <div style="height: 8px; width: 50%; background: rgba(255,255,255,0.1); border-radius: 4px;"></div>
           </div>
-          <h3 class="product-title">Real Estate Plot Management & CRM</h3>
-          <p class="product-desc">Interactive land layout mapping, plot availability tracking, buyer CRM, and automated agent lead assignment.</p>
+          <h3 style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 800; color: #FFFFFF; margin-bottom: 8px;">Real Estate Plot Management</h3>
+          <p style="font-size: 0.9rem; color: var(--text-dark-secondary);">Interactive land layout mapping, plot tracking, buyer CRM, and automated lead assignment.</p>
         </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 48px;">
-        <span class="eyebrow" style="background: rgba(255, 255, 255, 0.05); color: var(--text-dark-secondary); border-color: var(--border-dark);">More Products Coming Soon</span>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     16. BLOG / INSIGHTS
+     13. TESTIMONIALS & ABOUT & BLOG
      ========================================================================== -->
+  <section class="section testimonials-section">
+    <div class="container">
+      <div class="testi-featured-box">
+        <div style="color: #FFC107; font-size: 1.2rem; margin-bottom: 16px;">★★★★★</div>
+        <p style="font-family: var(--font-heading); font-size: 1.4rem; font-weight: 700; color: var(--text-light-primary); line-height: 1.6; margin-bottom: 24px;">
+          "HigherIT has been instrumental in our digital growth. Their strategic digital marketing solutions have positioned us as a trusted brand in our industry."
+        </p>
+        <div style="font-weight: 800; font-family: var(--font-heading);">Shopping Lovers — Google Review</div>
+      </div>
+    </div>
+  </section>
+
   <section class="section blog-section" id="blog">
     <div class="container">
       <div class="section-header">
         <div class="eyebrow">HIGHERIT INSIGHTS</div>
-        <h2 class="section-title">
-          Ideas That Help Businesses <span class="highlight-blue">Go Higher.</span>
-        </h2>
+        <h2 class="section-title">Ideas That Help Businesses <span class="highlight-blue">Go Higher.</span></h2>
       </div>
 
-      <div class="blog-grid">
-        <div class="blog-card">
-          <div class="blog-tag">Digital Growth</div>
-          <h3 class="blog-title">Why Your Website Isn't Converting Traffic Into Customers</h3>
-          <p class="blog-excerpt">Discover the strategic friction points in modern UX design and copy that stop visitors from taking action.</p>
+      <div class="blog-editorial-grid">
+        <div style="background: var(--bg-light-card); border: 1px solid var(--border-light); border-radius: var(--border-radius-xl); padding: 48px;">
+          <div style="font-size: 0.8rem; font-weight: 800; color: var(--brand-orange); text-transform: uppercase; margin-bottom: 12px;">FEATURED INSIGHT</div>
+          <h3 style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; margin-bottom: 16px;">Why Your Website Isn't Converting Traffic Into Customers</h3>
+          <p style="font-size: 1rem; color: var(--text-light-secondary); line-height: 1.6;">Discover the strategic friction points in modern UX design and copy that stop visitors from taking action.</p>
         </div>
-        <div class="blog-card">
-          <div class="blog-tag" style="color: var(--brand-blue);">AI & Automation</div>
-          <h3 class="blog-title">How Small Businesses Are Using AI Assistants to Save 20 Hours a Week</h3>
-          <p class="blog-excerpt">Practical automation frameworks to qualify leads, send quotes, and answer FAQs without expanding payroll.</p>
-        </div>
-        <div class="blog-card">
-          <div class="blog-tag">Branding</div>
-          <h3 class="blog-title">Building a High-Trust Brand Identity in 2026</h3>
-          <p class="blog-excerpt">How visual consistency, positioning clarity, and tech modernism position your company as a market leader.</p>
+
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          <div style="background: var(--bg-light-card); border: 1px solid var(--border-light); border-radius: var(--border-radius-lg); padding: 28px;">
+            <div style="font-size: 0.75rem; font-weight: 800; color: var(--brand-blue); text-transform: uppercase; margin-bottom: 8px;">AI & AUTOMATION</div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800;">How Small Businesses Save 20 Hours a Week With AI</h4>
+          </div>
+          <div style="background: var(--bg-light-card); border: 1px solid var(--border-light); border-radius: var(--border-radius-lg); padding: 28px;">
+            <div style="font-size: 0.75rem; font-weight: 800; color: var(--brand-orange); text-transform: uppercase; margin-bottom: 8px;">BRANDING</div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.2rem; font-weight: 800;">Building a High-Trust Brand Identity in 2026</h4>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- ==========================================================================
-     17. FINAL CTA
+     17. FINAL CTA & FOOTER
      ========================================================================== -->
   <section class="final-cta-section" id="contact">
     <div class="container">
       <div class="final-cta-card">
-        <div class="final-cta-content">
-          <h2 class="section-title" style="font-size: clamp(2.4rem, 4vw, 3.4rem); margin-bottom: 16px;">
+        <div>
+          <h2 class="section-title" style="font-size: clamp(2.6rem, 4.5vw, 3.8rem); margin-bottom: 16px;">
             Ready to Take Your Business <span class="highlight-orange">Higher?</span>
           </h2>
-          <p class="section-subtitle">
-            Tell us where you are today. We'll help you figure out where to go next.
-          </p>
+          <p class="section-subtitle">Tell us where you are today. We'll help you figure out where to go next.</p>
         </div>
-        <div class="final-cta-buttons">
-          <a href="mailto:info@higheritvizag.com" class="btn btn-primary">
-            Start a Project
-            <span class="btn-arrow">→</span>
-          </a>
-          <a href="tel:+919160368468" class="btn btn-secondary">
-            Talk to HigherIT
-          </a>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="mailto:info@higheritvizag.com" class="btn btn-primary">Start a Project →</a>
+          <a href="tel:+919160368468" class="btn btn-secondary">Talk to HigherIT</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==========================================================================
-     18. FOOTER
-     ========================================================================== -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#home">
-            <img src="assets/images/logo.png" alt="HigherIT Logo" width="160" height="38">
-          </a>
-          <p style="font-size: 0.95rem; color: var(--text-dark-secondary); max-width: 320px;">
-            Digital Growth. Technology. AI.<br>
-            We help businesses build powerful brands, attract more customers and automate the way they work.
-          </p>
-        </div>
-
         <div>
-          <h4 class="footer-title">Company</h4>
-          <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#about">About Us</a>
-            <a href="#services">Services</a>
-            <a href="#industries">Industries</a>
-            <a href="#products">Products</a>
-            <a href="#work">Projects</a>
-            <a href="#blog">Blog</a>
-            <a href="#contact">Contact</a>
+          <img src="assets/images/logo.png" alt="HigherIT Logo" width="160" height="38" style="margin-bottom: 20px;">
+          <p style="font-size: 0.95rem; color: var(--text-dark-secondary);">Digital Growth. Technology. AI.<br>Visakhapatnam, Andhra Pradesh, India</p>
+        </div>
+        <div>
+          <h4 style="font-family: var(--font-heading); color: #FFF; margin-bottom: 16px;">Company</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+            <a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#work">Projects</a>
           </div>
         </div>
-
         <div>
-          <h4 class="footer-title">Services</h4>
-          <div class="footer-links">
-            <a href="#services">Digital Marketing</a>
-            <a href="#services">Branding & Creative</a>
-            <a href="#services">Web Development</a>
-            <a href="#services">App Development</a>
-            <a href="#services">AI & Automation</a>
+          <h4 style="font-family: var(--font-heading); color: #FFF; margin-bottom: 16px;">Services</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+            <a href="#services">Digital Marketing</a><a href="#services">Branding</a><a href="#services">Web Apps</a><a href="#services">AI Solutions</a>
           </div>
         </div>
-
         <div>
-          <h4 class="footer-title">Products</h4>
-          <div class="footer-links">
-            <a href="#products">Jewellery E-commerce</a>
-            <a href="#products">Photographer CRM</a>
-            <a href="#products">Real Estate CRM</a>
-            <a href="#products">Coming Soon</a>
+          <h4 style="font-family: var(--font-heading); color: #FFF; margin-bottom: 16px;">Products</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.9rem;">
+            <a href="#products">Jewellery E-commerce</a><a href="#products">Photographer CRM</a><a href="#products">Real Estate CRM</a>
           </div>
         </div>
-
         <div>
-          <h4 class="footer-title">Contact Us</h4>
-          <div class="footer-links" style="gap: 16px;">
-            <div style="display: flex; gap: 10px; font-size: 0.9rem;">
-              <i data-lucide="map-pin" style="color: var(--brand-orange); flex-shrink: 0; width: 18px;"></i>
-              <span>Visakhapatnam, Andhra Pradesh, India — 530043</span>
-            </div>
-            <div style="display: flex; gap: 10px; font-size: 0.9rem;">
-              <i data-lucide="phone" style="color: var(--brand-blue); flex-shrink: 0; width: 18px;"></i>
-              <a href="tel:+919160368468">+91 916 036 8468</a>
-            </div>
-            <div style="display: flex; gap: 10px; font-size: 0.9rem;">
-              <i data-lucide="mail" style="color: var(--brand-orange); flex-shrink: 0; width: 18px;"></i>
-              <a href="mailto:info@higheritvizag.com">info@higheritvizag.com</a>
-            </div>
+          <h4 style="font-family: var(--font-heading); color: #FFF; margin-bottom: 16px;">Contact</h4>
+          <div style="font-size: 0.9rem; color: var(--text-dark-secondary);">
+            +91 916 036 8468<br>info@higheritvizag.com
           </div>
         </div>
       </div>
-
-      <div class="footer-bottom">
+      <div style="border-top: 1px solid var(--border-dark); padding-top: 30px; display: flex; justify-content: space-between; font-size: 0.85rem;">
         <div>© 2026 HigherIT. All Rights Reserved.</div>
-        <div class="footer-legal">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-        </div>
+        <div>Privacy Policy • Terms & Conditions</div>
       </div>
     </div>
   </footer>
 
   <script src="main.js"></script>
-  <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-  </script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
