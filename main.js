@@ -30,14 +30,26 @@ function initMobileMenu() {
 
   if (!toggleBtn || !mobileMenu) return;
 
-  toggleBtn.addEventListener('click', () => {
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     mobileMenu.classList.toggle('open');
+    toggleBtn.classList.toggle('active');
   });
 
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
       mobileMenu.classList.remove('open');
+      toggleBtn.classList.remove('active');
     });
+  });
+
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('open') &&
+        !mobileMenu.contains(e.target) &&
+        !toggleBtn.contains(e.target)) {
+      mobileMenu.classList.remove('open');
+      toggleBtn.classList.remove('active');
+    }
   });
 }
 
