@@ -1,55 +1,50 @@
-import React, { useEffect } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { Navbar } from './components/Navbar';
-import { Footer } from './components/Footer';
+import React, { useState } from 'react'
+import Navbar from './components/Navbar'
+import HeroSection from './sections/HeroSection'
+import TrustSection from './sections/TrustSection'
+import EcosystemSection from './sections/EcosystemSection'
+import CapabilitiesSection from './sections/CapabilitiesSection'
+import ProcessSection from './sections/ProcessSection'
+import WhySection from './sections/WhySection'
+import StatsSection from './sections/StatsSection'
+import SelectedWorkSection from './sections/SelectedWorkSection'
+import AISection from './sections/AISection'
+import IndustryExplorerSection from './sections/IndustryExplorerSection'
+import ProductsSection from './sections/ProductsSection'
+import TestimonialsSection from './sections/TestimonialsSection'
+import InsightsSection from './sections/InsightsSection'
+import FinalCTASection from './sections/FinalCTASection'
+import Footer from './components/Footer'
+import ContactModal from './components/ContactModal'
 
-import { HomePage } from './pages/HomePage';
-import { AboutPage } from './pages/AboutPage';
-import { ServicesPage } from './pages/ServicesPage';
-import { IndustriesPage } from './pages/IndustriesPage';
-import { ProductsPage } from './pages/ProductsPage';
-import { ProjectsPage } from './pages/ProjectsPage';
-import { BlogPage } from './pages/BlogPage';
-import { ContactPage } from './pages/ContactPage';
+export default function App() {
+  const [isTalkOpen, setIsTalkOpen] = useState(false)
 
-const ScrollToTop = () => {
-  const { pathname, hash } = useLocation();
+  const handleOpenTalk = () => {
+    setIsTalkOpen(true)
+  }
 
-  useEffect(() => {
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-        return;
-      }
-    }
-    window.scrollTo(0, 0);
-  }, [pathname, hash]);
-
-  return null;
-};
-
-export const App = () => {
   return (
-    <>
-      <ScrollToTop />
-      <Navbar />
+    <div className="app-root">
+      <Navbar onOpenTalk={handleOpenTalk} />
       <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/services" element={<ServicesPage />} />
-          <Route path="/industries" element={<IndustriesPage />} />
-          <Route path="/products" element={<ProductsPage />} />
-          <Route path="/products/:slug" element={<ProductsPage />} />
-          <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/blog" element={<BlogPage />} />
-          <Route path="/contact" element={<ContactPage />} />
-        </Routes>
+        <HeroSection onOpenTalk={handleOpenTalk} />
+        <TrustSection />
+        <EcosystemSection />
+        <CapabilitiesSection onOpenTalk={handleOpenTalk} />
+        <ProcessSection />
+        <WhySection />
+        <StatsSection />
+        <SelectedWorkSection onOpenTalk={handleOpenTalk} />
+        <AISection />
+        <IndustryExplorerSection onOpenTalk={handleOpenTalk} />
+        <ProductsSection />
+        <TestimonialsSection />
+        <InsightsSection />
+        <FinalCTASection onOpenTalk={handleOpenTalk} />
       </main>
       <Footer />
-    </>
-  );
-};
-
-export default App;
+      <ContactModal isOpen={isTalkOpen} onClose={() => setIsTalkOpen(false)} />
+    </div>
+  )
+}

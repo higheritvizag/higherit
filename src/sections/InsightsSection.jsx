@@ -1,47 +1,33 @@
-import React from 'react';
-import { SectionHeading } from '../components/SectionHeading';
-import { Reveal } from '../components/Reveal';
-import { blogData } from '../data/blog';
+import React from 'react'
 
-export const InsightsSection = () => {
-  const featured = blogData.find(b => b.featured) || blogData[0];
-  const sideArticles = blogData.filter(b => !b.featured);
-
+export default function InsightsSection() {
   return (
     <section className="section blog-section" id="blog">
       <div className="container">
-        <SectionHeading
-          eyebrow="HIGHERIT INSIGHTS"
-          title={<>Ideas That Help Businesses <span className="highlight-blue">Go Higher.</span></>}
-        />
+        <div className="section-header" style={{ textAlign: 'center', marginBottom: 60 }}>
+          <div className="eyebrow" style={{ margin: '0 auto 24px' }}>HIGHERIT INSIGHTS</div>
+          <h2 className="section-title">Ideas That Help Businesses <span className="highlight-blue">Go Higher.</span></h2>
+        </div>
 
-        <div className="blog-editorial-grid">
-          <Reveal delay={0.1} style={{ background: 'var(--bg-light-card)', border: '1px solid var(--border-light)', borderRadius: 'var(--border-radius-xl)', padding: '48px' }}>
-            <div style={{ fontSize: '0.8rem', fontWeight: 800, color: 'var(--brand-orange)', textTransform: 'uppercase', marginBottom: '12px' }}>
-              {featured.category}
+        <div className="blog-grid">
+          <div className="blog-card" style={{ gridColumn: 'span 2' }}>
+            <div className="blog-category" style={{ color: 'var(--brand-orange)' }}>FEATURED INSIGHT</div>
+            <h3 className="blog-title" style={{ fontSize: '1.6rem', marginBottom: 16 }}>Why Your Website Isn't Converting Traffic Into Customers</h3>
+            <p className="cap-desc">Discover the strategic friction points in modern UX design and copy that stop visitors from taking action.</p>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            <div className="blog-card">
+              <div className="blog-category">AI & AUTOMATION</div>
+              <h4 className="blog-title">How Small Businesses Save 20 Hours a Week With AI</h4>
             </div>
-            <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.8rem', fontWeight: 800, marginBottom: '16px' }}>
-              {featured.title}
-            </h3>
-            <p style={{ fontSize: '1rem', color: 'var(--text-light-secondary)', lineHeight: 1.6 }}>
-              {featured.excerpt}
-            </p>
-          </Reveal>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-            {sideArticles.map((art, index) => (
-              <Reveal key={art.id} delay={0.1 * index} style={{ background: 'var(--bg-light-card)', border: '1px solid var(--border-light)', borderRadius: 'var(--border-radius-lg)', padding: '28px' }}>
-                <div style={{ fontSize: '0.75rem', fontWeight: 800, color: index % 2 === 0 ? 'var(--brand-blue)' : 'var(--brand-orange)', textTransform: 'uppercase', marginBottom: '8px' }}>
-                  {art.category}
-                </div>
-                <h4 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 800 }}>
-                  {art.title}
-                </h4>
-              </Reveal>
-            ))}
+            <div className="blog-card">
+              <div className="blog-category" style={{ color: 'var(--brand-orange)' }}>BRANDING</div>
+              <h4 className="blog-title">Building a High-Trust Brand Identity in 2026</h4>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

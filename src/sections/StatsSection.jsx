@@ -1,29 +1,28 @@
-import React from 'react';
-import { Reveal } from '../components/Reveal';
+import React from 'react'
 
-export const StatsSection = () => {
+export default function StatsSection() {
   return (
-    <section className="stats-band" id="numbers">
+    <section className="stats-band" id="numbers" style={{ padding: '60px 0', borderTop: '1px solid var(--border-dark)', borderBottom: '1px solid var(--border-dark)', background: 'var(--bg-dark-surface)' }}>
       <div className="container">
-        <Reveal className="stats-grid" delay={0.1}>
+        <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 30, textAlign: 'center' }}>
           <div>
-            <div className="stat-giant">300<span>+</span></div>
-            <div className="stat-lbl">Businesses Served</div>
+            <div className="stat-giant" style={{ fontFamily: 'var(--font-heading)', fontSize: '3rem', fontWeight: 800, color: 'var(--brand-orange)' }}>300+</div>
+            <div className="stat-lbl" style={{ color: 'var(--text-dark-secondary)', fontSize: '0.95rem' }}>Businesses Served</div>
           </div>
           <div>
-            <div className="stat-giant">150<span>+</span></div>
-            <div className="stat-lbl">Projects Delivered</div>
+            <div className="stat-giant" style={{ fontFamily: 'var(--font-heading)', fontSize: '3rem', fontWeight: 800, color: 'var(--brand-blue)' }}>150+</div>
+            <div className="stat-lbl" style={{ color: 'var(--text-dark-secondary)', fontSize: '0.95rem' }}>Projects Delivered</div>
           </div>
           <div>
-            <div className="stat-giant">50<span>+</span></div>
-            <div className="stat-lbl">Active Clients</div>
+            <div className="stat-giant" style={{ fontFamily: 'var(--font-heading)', fontSize: '3rem', fontWeight: 800, color: 'var(--brand-orange)' }}>50+</div>
+            <div className="stat-lbl" style={{ color: 'var(--text-dark-secondary)', fontSize: '0.95rem' }}>Active Clients</div>
           </div>
           <div>
-            <div className="stat-giant">4<span>+</span></div>
-            <div className="stat-lbl">Years Experience</div>
+            <div className="stat-giant" style={{ fontFamily: 'var(--font-heading)', fontSize: '3rem', fontWeight: 800, color: 'var(--brand-blue)' }}>4+</div>
+            <div className="stat-lbl" style={{ color: 'var(--text-dark-secondary)', fontSize: '0.95rem' }}>Years Experience</div>
           </div>
-        </Reveal>
+        </div>
       </div>
     </section>
-  );
-};
+  )
+}
