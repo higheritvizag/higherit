@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SectionHeading } from '../components/SectionHeading'
 import { Reveal } from '../components/Reveal'
@@ -113,9 +114,9 @@ export default function IndustryExplorerSection({ onOpenTalk }) {
               </div>
             </div>
 
-            <button type="button" onClick={onOpenTalk} className="btn btn-primary" style={{ marginTop: 32 }}>
+            <Link to="/industries" className="btn btn-primary" style={{ marginTop: 32 }}>
               Explore Industry Solution <ArrowRight style={{ width: 16, height: 16 }} />
-            </button>
+            </Link>
           </motion.div>
         </AnimatePresence>
       </div>

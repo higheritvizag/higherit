@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { SectionHeading } from '../components/SectionHeading'
 import { Reveal } from '../components/Reveal'
@@ -161,6 +162,16 @@ export default function ProductsSection() {
                       </div>
                     )
                   })}
+                </div>
+
+                <div style={{ marginTop: 24 }}>
+                  <Link
+                    to={`/products/${selectedProduct === 'photographer' ? 'photographer-crm' : selectedProduct === 'realestate' ? 'real-estate' : 'jewellery'}`}
+                    className="btn btn-secondary"
+                    style={{ fontSize: '0.9rem', padding: '12px 24px' }}
+                  >
+                    View Product Suite Details <ArrowRight style={{ width: 14, height: 14, marginLeft: 4 }} />
+                  </Link>
                 </div>
               </div>
 

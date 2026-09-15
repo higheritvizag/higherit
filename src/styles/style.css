@@ -251,11 +251,43 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--nav-text-muted);
+  transition: all var(--transition-fast);
+  position: relative;
+  padding: 4px 0;
+}
+
+.nav-link:hover {
+  color: var(--nav-text);
+}
+
+.nav-link.active {
+  color: var(--brand-orange);
+  font-weight: 700;
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--brand-orange);
+  border-radius: var(--border-radius-pill);
+}
+
+.mobile-nav-link {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--nav-text);
+  padding: 8px 0;
   transition: color var(--transition-fast);
 }
 
-.nav-link:hover, .nav-link.active {
-  color: var(--nav-text);
+.mobile-nav-link.active {
+  color: var(--brand-orange);
+  font-weight: 700;
 }
 
 /* Mobile Nav Toggle */

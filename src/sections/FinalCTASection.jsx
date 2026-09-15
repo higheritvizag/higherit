@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import { Reveal } from '../components/Reveal'
@@ -41,13 +42,13 @@ export default function FinalCTASection({ onOpenTalk }) {
             </p>
 
             <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap' }}>
-              <button type="button" onClick={onOpenTalk} className="btn btn-primary" style={{ padding: '18px 36px', fontSize: '1.05rem' }}>
+              <Link to="/contact" className="btn btn-primary" style={{ padding: '18px 36px', fontSize: '1.05rem' }}>
                 Let's Talk
                 <span className="btn-arrow"><ArrowRight style={{ width: 18, height: 18 }} /></span>
-              </button>
-              <button type="button" onClick={onOpenTalk} className="btn btn-secondary" style={{ padding: '18px 36px', fontSize: '1.05rem' }}>
+              </Link>
+              <Link to="/contact" className="btn btn-secondary" style={{ padding: '18px 36px', fontSize: '1.05rem' }}>
                 Start Your Project
-              </button>
+              </Link>
             </div>
           </div>
         </Reveal>

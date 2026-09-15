@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Footer() {
   return (
@@ -6,7 +7,9 @@ export default function Footer() {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <img src="/assets/images/logo.png" alt="HigherIT Logo" width="160" height="38" style={{ marginBottom: 20 }} />
+            <Link to="/">
+              <img src="/assets/images/logo.png" alt="HigherIT Logo" width="160" height="38" style={{ marginBottom: 20 }} />
+            </Link>
             <p style={{ fontSize: '0.95rem', color: '#98A4B7', lineHeight: 1.6 }}>
               Digital Growth • Technology • AI • Software Products<br />
               HigherIT Digital Growth & Tech Company<br />
@@ -17,40 +20,41 @@ export default function Footer() {
           <div>
             <h4 className="footer-col-title">Navigation</h4>
             <div className="footer-links">
-              <a href="#home" className="footer-link">Home</a>
-              <a href="#about" className="footer-link">About Us</a>
-              <a href="#services" className="footer-link">Services</a>
-              <a href="#work" className="footer-link">Projects</a>
-              <a href="#blog" className="footer-link">Blog</a>
+              <Link to="/" className="footer-link">Home</Link>
+              <Link to="/about" className="footer-link">About Us</Link>
+              <Link to="/services" className="footer-link">Services</Link>
+              <Link to="/projects" className="footer-link">Projects</Link>
+              <Link to="/blog" className="footer-link">Blog</Link>
+              <Link to="/contact" className="footer-link">Contact</Link>
             </div>
           </div>
 
           <div>
             <h4 className="footer-col-title">Services</h4>
             <div className="footer-links">
-              <a href="#services" className="footer-link">Digital Growth</a>
-              <a href="#services" className="footer-link">Brand & Creative</a>
-              <a href="#services" className="footer-link">Web & App Development</a>
-              <a href="#services" className="footer-link">AI & Automation</a>
+              <Link to="/services" className="footer-link">Digital Growth</Link>
+              <Link to="/services" className="footer-link">Brand & Creative</Link>
+              <Link to="/services" className="footer-link">Web & App Development</Link>
+              <Link to="/services" className="footer-link">AI & Automation</Link>
             </div>
           </div>
 
           <div>
             <h4 className="footer-col-title">Products</h4>
             <div className="footer-links">
-              <a href="#products" className="footer-link">Jewellery POS & E-commerce</a>
-              <a href="#products" className="footer-link">Photographer CRM</a>
-              <a href="#products" className="footer-link">Real Estate Plot CRM</a>
+              <Link to="/products/jewellery" className="footer-link">Jewellery POS & E-commerce</Link>
+              <Link to="/products/photographer-crm" className="footer-link">Photographer CRM</Link>
+              <Link to="/products/real-estate" className="footer-link">Real Estate Plot CRM</Link>
             </div>
           </div>
 
           <div>
             <h4 className="footer-col-title">Industries</h4>
             <div className="footer-links">
-              <a href="#industries" className="footer-link">Healthcare</a>
-              <a href="#industries" className="footer-link">Real Estate</a>
-              <a href="#industries" className="footer-link">Retail & E-commerce</a>
-              <a href="#industries" className="footer-link">Hospitality</a>
+              <Link to="/industries" className="footer-link">Healthcare</Link>
+              <Link to="/industries" className="footer-link">Real Estate</Link>
+              <Link to="/industries" className="footer-link">Retail & E-commerce</Link>
+              <Link to="/industries" className="footer-link">Hospitality</Link>
             </div>
           </div>
 

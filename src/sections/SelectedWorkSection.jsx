@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { SectionHeading } from '../components/SectionHeading'
 import { Reveal } from '../components/Reveal'
@@ -96,9 +97,9 @@ export default function SelectedWorkSection({ onOpenTalk }) {
                 </div>
               </div>
 
-              <button type="button" onClick={onOpenTalk} className="btn btn-primary" style={{ marginTop: 24 }}>
+              <Link to="/contact" className="btn btn-primary" style={{ marginTop: 24 }}>
                 Start Similar Project <ArrowRight style={{ width: 16, height: 16 }} />
-              </button>
+              </Link>
             </div>
           </div>
         </Reveal>
@@ -128,9 +129,9 @@ export default function SelectedWorkSection({ onOpenTalk }) {
                     </div>
                   </div>
 
-                  <button type="button" onClick={onOpenTalk} className="btn-case-link">
+                  <Link to="/projects" className="btn-case-link">
                     Explore Case Details <ArrowRight style={{ width: 14, height: 14 }} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </Reveal>

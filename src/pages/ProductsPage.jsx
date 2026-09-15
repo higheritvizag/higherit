@@ -1,19 +1,20 @@
-import React from 'react';
-import { ProductsSection } from '../sections/ProductsSection';
-import { FinalCTASection } from '../sections/FinalCTASection';
-import { Reveal } from '../components/Reveal';
+import React from 'react'
+import ProductsSection from '../sections/ProductsSection'
+import FinalCTASection from '../sections/FinalCTASection'
+import { Reveal } from '../components/Reveal'
 
-export const ProductsPage = () => {
+export function ProductsPage({ onOpenTalk }) {
   return (
     <div style={{ paddingTop: '100px' }}>
-      <section className="section" style={{ background: 'var(--bg-dark)' }}>
+      <section className="section section-theme-dark">
         <div className="container">
           <Reveal>
-            <div className="eyebrow eyebrow-blue">OUR SOFTWARE PRODUCTS</div>
-            <h1 className="section-title">
-              We Don't Just Build For Businesses. <span className="highlight-orange">We Build Products For Them.</span>
+            <div className="eyebrow eyebrow-blue">SOFTWARE PRODUCTS</div>
+            <h1 className="section-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.2rem)', fontWeight: 900, lineHeight: 1.1 }}>
+              WE DON'T JUST BUILD FOR BUSINESSES.<br />
+              <span className="highlight-orange">WE BUILD PRODUCTS FOR THEM.</span>
             </h1>
-            <p className="section-subtitle">
+            <p className="section-subtitle" style={{ maxWidth: '780px', fontSize: '1.2rem' }}>
               HigherIT engineers proprietary software platforms, CRMs, and retail POS engines designed for specialized industry verticals.
             </p>
           </Reveal>
@@ -21,7 +22,9 @@ export const ProductsPage = () => {
       </section>
 
       <ProductsSection />
-      <FinalCTASection />
+      <FinalCTASection onOpenTalk={onOpenTalk} />
     </div>
-  );
-};
+  )
+}
+
+export default ProductsPage

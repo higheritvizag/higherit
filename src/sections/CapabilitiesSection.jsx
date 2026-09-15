@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { SectionHeading } from '../components/SectionHeading'
 import { Reveal } from '../components/Reveal'
@@ -35,9 +36,9 @@ export default function CapabilitiesSection({ onOpenTalk }) {
                     <span className="cap-tag-pill">Lead Funnel Automation</span>
                     <span className="cap-tag-pill">ROAS Optimization</span>
                   </div>
-                  <button type="button" onClick={onOpenTalk} className="btn btn-primary">
+                  <Link to="/services" className="btn btn-primary">
                     Explore Digital Growth <ArrowRight style={{ width: 16, height: 16 }} />
-                  </button>
+                  </Link>
                 </div>
 
                 {/* GROW Visual Dashboard Interface Widget */}
@@ -157,9 +158,9 @@ export default function CapabilitiesSection({ onOpenTalk }) {
                     <span className="cap-tag-pill">Video & CGI</span>
                     <span className="cap-tag-pill">Design Systems</span>
                   </div>
-                  <button type="button" onClick={onOpenTalk} className="btn btn-secondary">
+                  <Link to="/services" className="btn btn-secondary">
                     Explore Brand & Creative <ArrowRight style={{ width: 16, height: 16 }} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -182,9 +183,9 @@ export default function CapabilitiesSection({ onOpenTalk }) {
                     <span className="cap-tag-pill">SaaS Platforms</span>
                     <span className="cap-tag-pill">Lighthouse 98+ Score</span>
                   </div>
-                  <button type="button" onClick={onOpenTalk} className="btn btn-primary">
+                  <Link to="/services" className="btn btn-primary">
                     Explore Development <ArrowRight style={{ width: 16, height: 16 }} />
-                  </button>
+                  </Link>
                 </div>
 
                 {/* BUILD Code Architecture Panel Widget */}
@@ -252,9 +253,9 @@ export default function CapabilitiesSection({ onOpenTalk }) {
                     <span className="cap-tag-pill">AI Content Engines</span>
                     <span className="cap-tag-pill">Custom ML Models</span>
                   </div>
-                  <button type="button" onClick={onOpenTalk} className="btn btn-primary" style={{ background: 'linear-gradient(135deg, var(--brand-blue) 0%, #0047B8 100%)' }}>
+                  <Link to="/services" className="btn btn-primary" style={{ background: 'linear-gradient(135deg, var(--brand-blue) 0%, #0047B8 100%)' }}>
                     Explore AI & Automation <ArrowRight style={{ width: 16, height: 16 }} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

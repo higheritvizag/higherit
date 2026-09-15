@@ -1,31 +1,33 @@
-import React from 'react';
-import { AboutSection } from '../sections/AboutSection';
-import { WhySection } from '../sections/WhySection';
-import { StatsSection } from '../sections/StatsSection';
-import { FinalCTASection } from '../sections/FinalCTASection';
-import { Reveal } from '../components/Reveal';
+import React from 'react'
+import WhySection from '../sections/WhySection'
+import StatsSection from '../sections/StatsSection'
+import EcosystemSection from '../sections/EcosystemSection'
+import FinalCTASection from '../sections/FinalCTASection'
+import { Reveal } from '../components/Reveal'
 
-export const AboutPage = () => {
+export function AboutPage({ onOpenTalk }) {
   return (
     <div style={{ paddingTop: '100px' }}>
-      <section className="section" style={{ background: 'var(--bg-dark)' }}>
+      <section className="section section-theme-dark">
         <div className="container">
           <Reveal>
-            <div className="eyebrow">ABOUT HIGHERIT</div>
-            <h1 className="section-title">
-              We Believe Every Business Can <span className="highlight-blue">Go Higher.</span>
+            <div className="eyebrow eyebrow-blue">ABOUT HIGHERIT</div>
+            <h1 className="section-title" style={{ fontSize: 'clamp(2.5rem, 5vw, 4.2rem)', fontWeight: 900, lineHeight: 1.1 }}>
+              We Believe Every Business Can <span className="highlight-orange">Go Higher.</span>
             </h1>
-            <p className="section-subtitle" style={{ maxWidth: '800px' }}>
-              HigherIT was founded with a singular conviction: technology, AI, and strategic digital execution should simplify business growth, multiply productivity, and create market dominance.
+            <p className="section-subtitle" style={{ maxWidth: '800px', fontSize: '1.2rem' }}>
+              HigherIT is a digital growth and technology company helping businesses build powerful brands, attract more customers, build web applications, and automate with AI under one strategic roof.
             </p>
           </Reveal>
         </div>
       </section>
 
-      <AboutSection />
+      <EcosystemSection />
       <WhySection />
       <StatsSection />
-      <FinalCTASection />
+      <FinalCTASection onOpenTalk={onOpenTalk} />
     </div>
-  );
-};
+  )
+}
+
+export default AboutPage

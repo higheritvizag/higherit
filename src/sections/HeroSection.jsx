@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { motion, useMotionValue, useSpring } from 'framer-motion'
 import { Sparkles, PlayCircle, ArrowRight } from 'lucide-react'
 import { useReducedMotion } from '../hooks/useReducedMotion'
@@ -142,14 +143,14 @@ export default function HeroSection({ onOpenTalk }) {
               transition={{ duration: 0.6, delay: 0.6, ease: defaultEase }}
               className="hero-buttons"
             >
-              <button type="button" onClick={onOpenTalk} className="btn btn-primary">
+              <Link to="/contact" className="btn btn-primary">
                 Start Your Project
                 <span className="btn-arrow"><ArrowRight style={{ width: 16, height: 16 }} /></span>
-              </button>
-              <a href="#work" className="btn btn-secondary">
+              </Link>
+              <Link to="/projects" className="btn btn-secondary">
                 <PlayCircle style={{ width: 18, height: 18 }} />
                 Explore Our Work
-              </a>
+              </Link>
             </motion.div>
           </div>
 
