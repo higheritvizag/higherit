@@ -39,6 +39,11 @@ const industryData = {
     title: 'Startups & Technology Companies',
     challenge: 'Need for rapid MVP prototype development, pitch presentation, and scalable cloud architecture.',
     solution: 'Full-stack React + Node web apps, AI integration, SaaS design systems, and rapid go-to-market execution.'
+  },
+  localbus: {
+    title: 'Local Businesses & Showrooms',
+    challenge: 'Low local Google map discoverability and reliance on traditional offline footfall alone.',
+    solution: 'Google Business Profile dominance, hyper-local search campaigns, customer review engines, and WhatsApp engagement.'
   }
 }
 
@@ -51,7 +56,7 @@ export default function IndustryExplorerSection({ onOpenTalk }) {
       <div className="container">
         <SectionHeading
           eyebrow="INDUSTRIES WE SERVE"
-          title={<>Solutions Tailored for <span className="highlight-blue">Every Industry.</span></>}
+          title={<>SOLUTIONS TAILORED <br /><span className="highlight-blue">FOR EVERY INDUSTRY.</span></>}
           subtitle="Deep domain expertise across high-growth business categories."
         />
 
@@ -71,7 +76,8 @@ export default function IndustryExplorerSection({ onOpenTalk }) {
                 {key === 'retail' && 'Retail & E-commerce'}
                 {key === 'hospitality' && 'Hospitality'}
                 {key === 'services' && 'Professional Services'}
-                {key === 'startups' && 'Startups & Tech'}
+                {key === 'startups' && 'Startups & Technology'}
+                {key === 'localbus' && 'Local Businesses'}
               </button>
             ))}
           </div>

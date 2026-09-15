@@ -21,7 +21,7 @@ export default function TrustSection() {
       <div className="container">
         <div className="trust-headline">
           <ShieldCheck style={{ width: 16, height: 16, color: 'var(--brand-orange)', display: 'inline', marginRight: 8 }} />
-          Trusted by high-growth businesses building what comes next
+          Trusted by businesses building what comes next.
         </div>
 
         <div className="ticker-wrapper-masked">

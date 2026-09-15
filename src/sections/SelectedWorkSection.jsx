@@ -60,7 +60,7 @@ export default function SelectedWorkSection({ onOpenTalk }) {
       <div className="container">
         <SectionHeading
           eyebrow="SELECTED WORK"
-          title={<>Real Projects. <span className="highlight-blue">Real Results.</span></>}
+          title={<>REAL PROJECTS. <span className="highlight-orange">REAL EXECUTION.</span></>}
           subtitle="Discover how we turn business goals into scalable digital assets, brand authority, and measurable revenue growth."
           align="left"
         />
@@ -83,15 +83,15 @@ export default function SelectedWorkSection({ onOpenTalk }) {
                   <p className="phase-desc">{featured.challenge}</p>
                 </div>
                 <div className="case-phase-item">
-                  <div className="phase-lbl">02 / STRATEGY</div>
+                  <div className="phase-lbl">02 / APPROACH</div>
                   <p className="phase-desc">{featured.strategy}</p>
                 </div>
                 <div className="case-phase-item">
-                  <div className="phase-lbl">03 / EXECUTION</div>
+                  <div className="phase-lbl">03 / WHAT WE BUILT</div>
                   <p className="phase-desc">{featured.execution}</p>
                 </div>
                 <div className="case-phase-item result-item">
-                  <div className="phase-lbl highlight-orange">04 / OUTCOME & RESULT</div>
+                  <div className="phase-lbl highlight-orange">04 / RESULT</div>
                   <p className="phase-desc result-desc">{featured.result}</p>
                 </div>
               </div>

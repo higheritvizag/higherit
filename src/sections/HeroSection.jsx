@@ -98,15 +98,32 @@ export default function HeroSection({ onOpenTalk }) {
                 transition={{ duration: 0.6, delay: 0.15, ease: defaultEase }}
                 style={{ display: 'block' }}
               >
-                We Build. <span className="highlight-blue">We Grow.</span>
+                WE BUILD.
               </motion.span>
               <motion.span
                 initial={{ opacity: 0, y: 25 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3, ease: defaultEase }}
+                transition={{ duration: 0.6, delay: 0.25, ease: defaultEase }}
+                style={{ display: 'block' }}
+                className="highlight-blue"
+              >
+                WE GROW.
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.35, ease: defaultEase }}
                 style={{ display: 'block' }}
               >
-                We Take Businesses <span className="highlight-orange">Higher.</span>
+                WE TAKE
+              </motion.span>
+              <motion.span
+                initial={{ opacity: 0, y: 25 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.45, ease: defaultEase }}
+                style={{ display: 'block' }}
+              >
+                BUSINESSES <span className="highlight-orange">HIGHER.</span>
               </motion.span>
             </h1>
 

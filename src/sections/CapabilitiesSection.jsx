@@ -12,7 +12,7 @@ export default function CapabilitiesSection({ onOpenTalk }) {
       <div className="container">
         <SectionHeading
           eyebrow="WHAT WE DO"
-          title={<>Everything You Need to <span className="highlight-blue">Grow Digitally.</span></>}
+          title={<>EVERYTHING YOU NEED TO <span className="highlight-orange">GROW DIGITALLY.</span></>}
           subtitle="Four core capabilities integrated under one strategic roof — eliminating vendor friction and driving enterprise growth."
           align="left"
         />
@@ -24,19 +24,19 @@ export default function CapabilitiesSection({ onOpenTalk }) {
               <div className="cap-editorial-grid">
                 <div className="cap-editorial-info">
                   <div className="cap-editorial-num">01 / GROW</div>
-                  <h3 className="cap-editorial-title">Digital Marketing & Customer Acquisition</h3>
+                  <h3 className="cap-editorial-title">Digital Growth</h3>
                   <p className="cap-editorial-desc">
                     Performance marketing, Google & Meta ads, search optimization, and automated conversion funnels engineered to acquire high-intent clients at scale.
                   </p>
                   <div className="cap-tags-flex">
                     <span className="cap-tag-pill">Meta & Google Ads</span>
                     <span className="cap-tag-pill">Performance Marketing</span>
-                    <span className="cap-tag-pill">SEO & Search Dominance</span>
+                    <span className="cap-tag-pill">SEO Dominance</span>
                     <span className="cap-tag-pill">Lead Funnel Automation</span>
                     <span className="cap-tag-pill">ROAS Optimization</span>
                   </div>
                   <button type="button" onClick={onOpenTalk} className="btn btn-primary">
-                    Explore Digital Marketing <ArrowRight style={{ width: 16, height: 16 }} />
+                    Explore Digital Growth <ArrowRight style={{ width: 16, height: 16 }} />
                   </button>
                 </div>
 
@@ -146,7 +146,7 @@ export default function CapabilitiesSection({ onOpenTalk }) {
 
                 <div className="cap-editorial-info">
                   <div className="cap-editorial-num" style={{ color: 'var(--brand-blue)' }}>02 / CREATE</div>
-                  <h3 className="cap-editorial-title">Brand & Creative Studio</h3>
+                  <h3 className="cap-editorial-title">Brand & Creative</h3>
                   <p className="cap-editorial-desc">
                     Positioning clarity, premium design systems, UI/UX aesthetics, and CGI creative campaigns that make companies unforgettable.
                   </p>
@@ -158,7 +158,7 @@ export default function CapabilitiesSection({ onOpenTalk }) {
                     <span className="cap-tag-pill">Design Systems</span>
                   </div>
                   <button type="button" onClick={onOpenTalk} className="btn btn-secondary">
-                    Explore Creative <ArrowRight style={{ width: 16, height: 16 }} />
+                    Explore Brand & Creative <ArrowRight style={{ width: 16, height: 16 }} />
                   </button>
                 </div>
               </div>
@@ -171,7 +171,7 @@ export default function CapabilitiesSection({ onOpenTalk }) {
               <div className="cap-editorial-grid">
                 <div className="cap-editorial-info">
                   <div className="cap-editorial-num">03 / BUILD</div>
-                  <h3 className="cap-editorial-title">Web & Application Engineering</h3>
+                  <h3 className="cap-editorial-title">Web & App Development</h3>
                   <p className="cap-editorial-desc">
                     High-performance business websites, web applications, e-commerce systems, and custom SaaS software platforms engineered for speed, conversion, and scale.
                   </p>
@@ -183,7 +183,7 @@ export default function CapabilitiesSection({ onOpenTalk }) {
                     <span className="cap-tag-pill">Lighthouse 98+ Score</span>
                   </div>
                   <button type="button" onClick={onOpenTalk} className="btn btn-primary">
-                    Explore Engineering <ArrowRight style={{ width: 16, height: 16 }} />
+                    Explore Development <ArrowRight style={{ width: 16, height: 16 }} />
                   </button>
                 </div>
 
@@ -241,7 +241,7 @@ export default function CapabilitiesSection({ onOpenTalk }) {
 
                 <div className="cap-editorial-info">
                   <div className="cap-editorial-num" style={{ color: 'var(--brand-blue)' }}>04 / INTELLIGENCE</div>
-                  <h3 className="cap-editorial-title">AI & Business Automation</h3>
+                  <h3 className="cap-editorial-title">AI & Automation</h3>
                   <p className="cap-editorial-desc">
                     Deploy intelligent AI chatbots, AI virtual employees, automated lead routing, and WhatsApp workflows to eliminate operational friction and scale productivity.
                   </p>
@@ -253,7 +253,7 @@ export default function CapabilitiesSection({ onOpenTalk }) {
                     <span className="cap-tag-pill">Custom ML Models</span>
                   </div>
                   <button type="button" onClick={onOpenTalk} className="btn btn-primary" style={{ background: 'linear-gradient(135deg, var(--brand-blue) 0%, #0047B8 100%)' }}>
-                    Explore AI Solutions <ArrowRight style={{ width: 16, height: 16 }} />
+                    Explore AI & Automation <ArrowRight style={{ width: 16, height: 16 }} />
                   </button>
                 </div>
               </div>

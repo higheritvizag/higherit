@@ -1,30 +1,64 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+import { SectionHeading } from '../components/SectionHeading'
+import { Reveal } from '../components/Reveal'
+import { ArrowRight, Clock, BookOpen } from 'lucide-react'
 
 export default function InsightsSection() {
   return (
     <section className="section blog-section section-theme-light" id="blog">
       <div className="container">
-        <div className="section-header" style={{ textAlign: 'center', marginBottom: 60 }}>
-          <div className="eyebrow" style={{ margin: '0 auto 24px' }}>HIGHERIT INSIGHTS</div>
-          <h2 className="section-title">Ideas That Help Businesses <span className="highlight-blue">Go Higher.</span></h2>
-        </div>
+        <SectionHeading
+          eyebrow="HIGHERIT INSIGHTS"
+          title={<>IDEAS THAT HELP <br /><span className="highlight-orange">BUSINESSES GO HIGHER.</span></>}
+          subtitle="Strategic perspectives on digital growth, technology, software engineering, and AI automation."
+        />
 
-        <div className="blog-grid">
-          <div className="blog-card" style={{ gridColumn: 'span 2' }}>
-            <div className="blog-category" style={{ color: 'var(--brand-orange)' }}>FEATURED INSIGHT</div>
-            <h3 className="blog-title" style={{ fontSize: '1.6rem', marginBottom: 16 }}>Why Your Website Isn't Converting Traffic Into Customers</h3>
-            <p className="cap-desc">Discover the strategic friction points in modern UX design and copy that stop visitors from taking action.</p>
-          </div>
+        <div className="insights-editorial-grid">
+          {/* 1 Large Featured Article */}
+          <Reveal delay={0.1}>
+            <div className="insight-featured-card">
+              <div className="insight-meta-flex">
+                <span className="insight-cat-tag cat-growth">DIGITAL GROWTH</span>
+                <span className="insight-read-time"><Clock style={{ width: 14, height: 14 }} /> 5 min read</span>
+              </div>
+              <h3 className="insight-featured-title">Why Your Business Website Isn't Converting High-Intent Traffic into Customers</h3>
+              <p className="insight-featured-excerpt">
+                Discover the 5 strategic UX friction points, slow loading architectures, and weak value propositions that cause enterprise leads to bounce — and how to fix them.
+              </p>
+              <div className="insight-author-row">
+                <div className="insight-author-avatar">HI</div>
+                <div>
+                  <div className="insight-author-name">HigherIT Growth Team</div>
+                  <div className="insight-pub-date">Sep 2026 • Strategy Guide</div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
 
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
-            <div className="blog-card">
-              <div className="blog-category">AI & AUTOMATION</div>
-              <h4 className="blog-title">How Small Businesses Save 20 Hours a Week With AI</h4>
-            </div>
-            <div className="blog-card">
-              <div className="blog-category" style={{ color: 'var(--brand-orange)' }}>BRANDING</div>
-              <h4 className="blog-title">Building a High-Trust Brand Identity in 2026</h4>
-            </div>
+          {/* 2 Supporting Articles Column */}
+          <div className="insights-supporting-col">
+            <Reveal delay={0.2}>
+              <div className="insight-secondary-card">
+                <div className="insight-meta-flex">
+                  <span className="insight-cat-tag cat-ai">AI & AUTOMATION</span>
+                  <span className="insight-read-time"><Clock style={{ width: 14, height: 14 }} /> 4 min read</span>
+                </div>
+                <h4 className="insight-secondary-title">How Growing Companies Save 20 Hours a Week with Custom AI Workflows</h4>
+                <p className="insight-secondary-desc">From WhatsApp lead qualification to automated CRM updates, see how AI virtual employees work 24/7.</p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.3}>
+              <div className="insight-secondary-card">
+                <div className="insight-meta-flex">
+                  <span className="insight-cat-tag cat-branding">BRANDING & TECH</span>
+                  <span className="insight-read-time"><Clock style={{ width: 14, height: 14 }} /> 6 min read</span>
+                </div>
+                <h4 className="insight-secondary-title">Building a High-Trust Brand Identity and Scalable Web Architecture in 2026</h4>
+                <p className="insight-secondary-desc">Why positioning clarity, cohesive design systems, and rapid web apps outperform legacy marketing agencies.</p>
+              </div>
+            </Reveal>
           </div>
         </div>
       </div>

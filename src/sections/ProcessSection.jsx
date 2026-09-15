@@ -21,7 +21,7 @@ export default function ProcessSection() {
       <div className="container">
         <SectionHeading
           eyebrow="THE HIGHERIT WAY"
-          title={<>Strategy First. Technology Second. <span className="highlight-orange">Growth Always.</span></>}
+          title={<>STRATEGY FIRST.<br />TECHNOLOGY SECOND.<br /><span className="highlight-orange">GROWTH ALWAYS.</span></>}
           subtitle="Our 7-stage growth trajectory turns business potential into scalable, automated enterprise revenue."
         />
 

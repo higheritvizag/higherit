@@ -32,9 +32,8 @@ const aiModules = [
   { title: 'AI Customer Support', desc: '24/7 instant enquiry resolution across web, Instagram, and WhatsApp without human delay.', icon: MessageSquare, tag: '24/7 Support' },
   { title: 'AI Lead Assistant', desc: 'Qualify, rank, and assign incoming high-intent leads automatically in real time.', icon: UserCheck, tag: 'Lead Scoring' },
   { title: 'AI Content Engine', desc: 'Generate localized ad copy, social creative assets, and email sequences 10x faster.', icon: Zap, tag: 'Creative AI' },
-  { title: 'AI Virtual Employees', desc: 'Bespoke AI team members trained on your company knowledge base and pricing sheets.', icon: Bot, tag: 'Custom Trained' },
-  { title: 'Workflow Automation', desc: 'Connect CRM, Google Sheets, payment gateways, and WhatsApp to eliminate repetitive tasks.', icon: RefreshCw, tag: 'Zero Friction' },
-  { title: 'Custom AI Models', desc: 'Private, secure machine learning models fine-tuned exclusively for your enterprise datasets.', icon: Cpu, tag: 'Enterprise Data' }
+  { title: 'AI Business Assistant', desc: 'Bespoke AI team members trained on your company knowledge base, docs, and pricing sheets.', icon: Bot, tag: 'Custom Trained' },
+  { title: 'AI Automation', desc: 'Connect CRM, Google Sheets, payment gateways, and WhatsApp to eliminate repetitive tasks.', icon: RefreshCw, tag: 'Zero Friction' }
 ]
 
 export default function AISection() {
@@ -46,7 +45,7 @@ export default function AISection() {
       <div className="container">
         <SectionHeading
           eyebrow="THE FUTURE IS INTELLIGENT"
-          title={<>What If Your Business <span className="highlight-orange">Had an AI Team?</span></>}
+          title={<>WHAT IF YOUR BUSINESS <br /><span className="highlight-orange">HAD AN AI TEAM?</span></>}
           subtitle="AI isn't just about text generation. Deployed correctly, custom AI workflows handle repetitive operations, qualify leads 24/7, and multiply team leverage."
         />
 
@@ -58,7 +57,7 @@ export default function AISection() {
                 <div className="ai-hub-icon-box"><Bot style={{ width: 22, height: 22, color: 'var(--brand-orange)' }} /></div>
                 <div>
                   <h3 className="ai-hub-heading">HigherIT AI Operations Hub</h3>
-                  <p className="ai-hub-subtext">Live Automated Lead Processing Workflow Pipeline</p>
+                  <p className="ai-hub-subtext">NEW LEAD → AI QUALIFIES → AI UNDERSTANDS → AI RESPONDS → SALES ASSIGNED → FOLLOW-UP AUTOMATED</p>
                 </div>
               </div>
               <div className="ai-live-badge"><span className="live-dot" /> SYSTEM ACTIVE</div>

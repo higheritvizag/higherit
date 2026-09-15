@@ -4,10 +4,13 @@ export default function WhySection() {
   return (
     <section className="section why-section section-theme-light" id="about">
       <div className="container">
-        <h2 className="why-statement" style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2.2rem, 4vw, 3.4rem)', fontWeight: 800, marginBottom: 48, textAlign: 'center' }}>
-          One Team. One Strategy.<br />
-          <span className="highlight-blue">One Digital Ecosystem.</span>
-        </h2>
+        <div className="section-header" style={{ textAlign: 'center', marginBottom: 48 }}>
+          <div className="eyebrow" style={{ margin: '0 auto 20px' }}>WHY HIGHERIT</div>
+          <h2 className="why-statement" style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2.2rem, 4vw, 3.6rem)', fontWeight: 900, lineHeight: 1.12, letterSpacing: '-0.025em' }}>
+            ONE TEAM. ONE STRATEGY.<br />
+            <span className="highlight-blue">ONE DIGITAL ECOSYSTEM.</span>
+          </h2>
+        </div>
 
         <div className="why-list-rows" style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
           <div className="why-row-item">

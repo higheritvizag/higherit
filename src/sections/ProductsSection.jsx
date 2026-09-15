@@ -84,7 +84,7 @@ export default function ProductsSection() {
         <SectionHeading
           eyebrow="HIGHERIT PRODUCT SUITE"
           eyebrowColor="blue"
-          title={<>We Don't Just Build For Businesses.<br /><span className="highlight-orange">We Build Products For Them.</span></>}
+          title={<>WE DON'T JUST BUILD FOR BUSINESSES.<br /><span className="highlight-orange">WE BUILD PRODUCTS FOR THEM.</span></>}
           subtitle="Enterprise-grade software platforms tailored to solve specific industry workflow bottlenecks."
         />
 
@@ -96,8 +96,8 @@ export default function ProductsSection() {
               className={`product-tab-card ${selectedProduct === 'jewellery' ? 'active' : ''}`}
               onClick={() => setSelectedProduct('jewellery')}
             >
-              <div className="product-tab-tag">JEWELLERY POS</div>
-              <div className="product-tab-title">Jewellery Showroom Suite</div>
+              <div className="product-tab-tag">SOFTWARE PRODUCT</div>
+              <div className="product-tab-title">Jewellery E-commerce & Billing</div>
             </button>
 
             <button
@@ -105,8 +105,8 @@ export default function ProductsSection() {
               className={`product-tab-card ${selectedProduct === 'photographer' ? 'active' : ''}`}
               onClick={() => setSelectedProduct('photographer')}
             >
-              <div className="product-tab-tag" style={{ color: 'var(--brand-blue-light)' }}>PHOTOGRAPHER CRM</div>
-              <div className="product-tab-title">Photographer & Studio CRM</div>
+              <div className="product-tab-tag" style={{ color: 'var(--brand-blue-light)' }}>SOFTWARE PRODUCT</div>
+              <div className="product-tab-title">Photographer CRM</div>
             </button>
 
             <button
@@ -114,8 +114,8 @@ export default function ProductsSection() {
               className={`product-tab-card ${selectedProduct === 'realestate' ? 'active' : ''}`}
               onClick={() => setSelectedProduct('realestate')}
             >
-              <div className="product-tab-tag">PLOT MANAGEMENT</div>
-              <div className="product-tab-title">Real Estate Plot CRM</div>
+              <div className="product-tab-tag">SOFTWARE PRODUCT</div>
+              <div className="product-tab-title">Real Estate CRM & Plot Management</div>
             </button>
           </div>
         </Reveal>

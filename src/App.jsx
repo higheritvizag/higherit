@@ -11,7 +11,6 @@ import SelectedWorkSection from './sections/SelectedWorkSection'
 import AISection from './sections/AISection'
 import IndustryExplorerSection from './sections/IndustryExplorerSection'
 import ProductsSection from './sections/ProductsSection'
-import TestimonialsSection from './sections/TestimonialsSection'
 import InsightsSection from './sections/InsightsSection'
 import FinalCTASection from './sections/FinalCTASection'
 import Footer from './components/Footer'
@@ -39,7 +38,6 @@ export default function App() {
         <AISection />
         <IndustryExplorerSection onOpenTalk={handleOpenTalk} />
         <ProductsSection />
-        <TestimonialsSection />
         <InsightsSection />
         <FinalCTASection onOpenTalk={handleOpenTalk} />
       </main>
